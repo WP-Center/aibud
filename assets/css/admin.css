@@ -1,0 +1,2882 @@
+@charset "UTF-8";
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+body h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+body a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+body .ai-buddy-button {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #2985F7;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  padding: 12px 20px 11px;
+  background: #2985F7;
+  border-radius: 4px;
+  margin-left: 10px;
+  line-height: 15px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #ffffff;
+  cursor: pointer;
+}
+body .ai-buddy-button.button-full {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+}
+body .ai-buddy-button.right-alignment {
+  margin-left: auto;
+  margin-right: 0;
+}
+body .ai-buddy-button .button-loader {
+  display: none !important;
+  -webkit-animation: rotate 1.5s infinite linear;
+          animation: rotate 1.5s infinite linear;
+  visibility: hidden;
+  opacity: 0;
+}
+body .ai-buddy-button.loading {
+  min-width: 114px;
+  min-height: 40px;
+  line-height: 0;
+  font-size: 0;
+}
+body .ai-buddy-button.loading .button-loader {
+  display: block !important;
+  font-size: 18px;
+  line-height: 14px;
+  margin-bottom: 0;
+  visibility: visible;
+  opacity: 1;
+}
+body .ai-buddy-button:first-child {
+  margin-left: 0;
+}
+body .ai-buddy-button:hover, body .ai-buddy-button:active, body .ai-buddy-button:focus {
+  background-color: #1c56bc;
+  border-color: #1c56bc;
+}
+body .ai-buddy-button:disabled, body .ai-buddy-button[disabled] {
+  opacity: 0.5;
+  cursor: default;
+  border: 1px solid #2985F7;
+  background: #2985F7;
+}
+body .ai-buddy-button.outline {
+  background-color: transparent;
+  color: #2985F7;
+}
+body .ai-buddy-button.outline:hover, body .ai-buddy-button.outline:active, body .ai-buddy-button.outline:focus {
+  background-color: #2985F7;
+  border-color: #2985F7;
+  color: #ffffff;
+}
+body .ai-buddy-button.outline:disabled, body .ai-buddy-button.outline[disabled] {
+  opacity: 0.5;
+  cursor: default;
+  border: 1px solid #2985F7;
+  background: transparent;
+  color: #2985F7;
+}
+body .ai-buddy-button.dark {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+}
+body .ai-buddy-button.dark.outline {
+  background-color: transparent;
+  color: #2C3E50;
+}
+body .ai-buddy-button.dark:hover, body .ai-buddy-button.dark:active, body .ai-buddy-button.dark:focus {
+  background-color: #1E2A36;
+  border-color: #1E2A36;
+  color: #ffffff;
+}
+body .ai-buddy-button.gray {
+  background-color: #8C99A5;
+  border-color: #8C99A5;
+}
+body .ai-buddy-button.gray.outline {
+  background-color: transparent;
+  color: #8C99A5;
+}
+body .ai-buddy-button.gray:hover, body .ai-buddy-button.gray:active, body .ai-buddy-button.gray:focus {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  color: #ffffff;
+}
+body .ai-buddy-navigation {
+  display: flex;
+  position: relative;
+  background-color: #1E2A36;
+  margin-top: 40px;
+  margin-right: 20px;
+  border-radius: 8px;
+  white-space: nowrap;
+  color: #ffffff;
+}
+body .ai-buddy-navigation-logo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+body .ai-buddy-navigation-logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+body .ai-buddy-navigation-logo-text {
+  padding-left: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+body .ai-buddy-navigation-logo-text .plugin-version {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+body .ai-buddy-navigation-list {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+body .ai-buddy-navigation-list-item {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  position: relative;
+}
+body .ai-buddy-navigation-list-item a {
+  display: flex;
+  align-items: center;
+  padding: 19px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+  outline: none;
+  z-index: 1;
+}
+body .ai-buddy-navigation-list-item a span {
+  margin-right: 7px;
+  font-size: 20px;
+}
+body .ai-buddy-navigation-list-item a var {
+  margin-left: 7px;
+  border-radius: 30px;
+  background-color: #2985F7;
+  padding: 3px 5px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 14px;
+  font-style: normal;
+  color: #ffffff;
+}
+body .ai-buddy-navigation-list-item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid #2985F7;
+  background-color: rgba(255, 255, 255, 0.1);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
+}
+body .ai-buddy-navigation-list-item:active a, body .ai-buddy-navigation-list-item:focus a, body .ai-buddy-navigation-list-item.active a {
+  color: #ffffff;
+}
+body .ai-buddy-navigation-list-item:active:after, body .ai-buddy-navigation-list-item:focus:after, body .ai-buddy-navigation-list-item.active:after {
+  visibility: visible;
+  opacity: 1;
+}
+body .ai-buddy-navigation-list-item.upcoming:after {
+  display: none;
+}
+body .ai-buddy-navigation-list-item.upcoming a {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: default;
+}
+body .ai-buddy-navigation-additions {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 auto;
+}
+body .ai-buddy-navigation-additions a {
+  color: #ffffff;
+}
+body .ai-buddy-navigation-additions .notifications-status {
+  display: flex;
+  align-items: center;
+  padding: 19px;
+  max-width: 70px;
+  line-height: 12px;
+  font-size: 12px;
+  box-shadow: none;
+  white-space: normal;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+body .ai-buddy-navigation-additions .notifications-status span {
+  margin-right: 7px;
+  position: relative;
+  font-size: 18px;
+}
+body .ai-buddy-navigation-additions .additions-menu {
+  display: flex;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 0;
+  font-size: 5px;
+  box-shadow: none;
+}
+body .ai-buddy-navigation-additions .additions-menu span:nth-child(2) {
+  display: none;
+}
+body .ai-buddy-navigation-additions .ai-status,
+body .ai-buddy-navigation-additions .support-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 170px;
+  margin-top: 10px;
+  border-radius: 10px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  background-color: #1E2A36;
+  visibility: hidden;
+  opacity: 1;
+}
+body .ai-buddy-navigation-additions .ai-status:before,
+body .ai-buddy-navigation-additions .support-menu:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 12px;
+  width: 18px;
+  height: 18px;
+  background-color: #1E2A36;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+body .ai-buddy-navigation-additions .ai-status ul,
+body .ai-buddy-navigation-additions .support-menu ul {
+  margin: 0;
+  padding: 0;
+}
+body .ai-buddy-navigation-additions .ai-status ul li,
+body .ai-buddy-navigation-additions .support-menu ul li {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+body .ai-buddy-navigation-additions .ai-status ul li:first-child,
+body .ai-buddy-navigation-additions .support-menu ul li:first-child {
+  border: 0;
+}
+body .ai-buddy-navigation-additions .ai-status ul li span,
+body .ai-buddy-navigation-additions .support-menu ul li span {
+  margin-right: 10px;
+  font-size: 18px;
+}
+body .ai-buddy-navigation-additions .ai-status ul li a,
+body .ai-buddy-navigation-additions .support-menu ul li a {
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+}
+body .ai-buddy-navigation-additions .ai-status {
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+  padding: 20px 0;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(30, 42, 54, 0.25);
+  color: #1E2A36;
+}
+body .ai-buddy-navigation-additions .ai-status > div {
+  display: none;
+}
+body .ai-buddy-navigation-additions .ai-status:before {
+  right: 80px;
+  background-color: #ffffff;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper {
+  width: 500px;
+  max-height: 520px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper h3 {
+  margin: 0 0 10px;
+  padding: 0 20px;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(30, 42, 54, 0.4);
+  border-radius: 10px;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #1E2A36;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content {
+  padding: 20px;
+  border-top: 1px solid #D6DADE;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content:first-child {
+  border-top: 0;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content .ai-status-title-box {
+  display: flex;
+  margin-bottom: 10px;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content .ai-status-title-box .ai-status-title {
+  flex: 1;
+  position: relative;
+  transition: all 0.3s;
+  white-space: break-spaces;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1E2A36;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content .ai-status-title-box .ai-status-date {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2985F7;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content .ai-status-description small {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1E2A36;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content .ai-status-description var {
+  font-style: normal;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content .ai-status-description strong {
+  font-weight: 400;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content .ai-status-description p {
+  margin: 0 0 10px;
+  white-space: break-spaces;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #27374E;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content .ai-status-description p:last-child {
+  margin-bottom: 0;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content .ai-status-description:first-child {
+  border-top: 0;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content.new {
+  background-color: #F6F9FC;
+  border-radius: 10px 10px 0 0;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content.new .ai-status-title-box .ai-status-title {
+  padding-left: 15px;
+}
+body .ai-buddy-navigation-additions .ai-status .ai-status-content-wrapper .ai-status-content.new .ai-status-title-box .ai-status-title:before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2985F7;
+}
+body .ai-buddy-navigation-additions.ai-status-active .ai-status {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+  visibility: visible;
+  z-index: 100;
+}
+body .ai-buddy-navigation-additions.ai-status-active .ai-status > div {
+  display: block;
+}
+body .ai-buddy-navigation-additions.support-menu-active .additions-menu span {
+  display: block;
+  font-size: 14px;
+}
+body .ai-buddy-navigation-additions.support-menu-active .additions-menu span:first-child {
+  display: none;
+}
+body .ai-buddy-navigation-additions.support-menu-active .support-menu {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+  visibility: visible;
+  z-index: 100;
+}
+body .ai-buddy-container {
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px 20px 20px 0;
+}
+body .ai-buddy-container var {
+  border-radius: 30px;
+  background-color: #2985F7;
+  padding: 4px 5px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 15px;
+  font-style: normal;
+  color: #ffffff;
+}
+body .ai-buddy-container .section {
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+body .ai-buddy-container .section:last-child {
+  margin-bottom: 0;
+}
+body .ai-buddy-container .section-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #D6DADE;
+  color: #8C99A5;
+}
+body .ai-buddy-container .section-subtitle {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #27374E;
+}
+body .ai-buddy-container .section-subtitle.align-center {
+  text-align: center;
+}
+body .ai-buddy-container .section-subtitle span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+body .ai-buddy-container .section-subtitle var {
+  display: flex;
+  align-items: flex-start;
+  font-style: normal;
+}
+body .ai-buddy-container .section-subtitle var .ai-buddy-button {
+  margin-left: 10px;
+}
+body .ai-buddy-container .section-subtitle var.with-line {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #D6DADE;
+}
+body .ai-buddy-container .section-subtitle:has(span) {
+  margin-bottom: 0;
+}
+body .ai-buddy-container .section-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(39, 55, 78, 0.7);
+}
+body .ai-buddy-container .section-description.align-center {
+  text-align: center;
+}
+body .ai-buddy-container .section-field {
+  margin-bottom: 20px;
+}
+body .ai-buddy-container .section-field:last-child {
+  margin-bottom: 0;
+}
+body .ai-buddy-container .section-field-information {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #8C99A5;
+}
+body .ai-buddy-container .section-field-information span {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  font-size: 13px;
+}
+body .ai-buddy-container .section-field-information a {
+  text-decoration: underline;
+  color: #8C99A5;
+}
+body .ai-buddy-container .section-field-information a:hover, body .ai-buddy-container .section-field-information a:active, body .ai-buddy-container .section-field-information a:focus {
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: none;
+  outline: none;
+}
+body .ai-buddy-container .section-field-information:last-child {
+  margin-bottom: 0;
+}
+body .ai-buddy-container .section-field.has-inner-columns {
+  display: flex;
+}
+body .ai-buddy-container .section-field.has-inner-columns > div {
+  flex: 1;
+  padding: 0 10px;
+}
+body .ai-buddy-container .section-field.has-inner-columns > div:first-child {
+  padding-left: 0;
+}
+body .ai-buddy-container .section-field.has-inner-columns > div:last-child {
+  padding-right: 0;
+}
+body .ai-buddy-container .section-field.has-inner-columns > div.section-field {
+  margin-bottom: 0;
+}
+body .ai-buddy-container .section-buttons-box, body .ai-buddy-container .section-button-box {
+  display: flex;
+  border-top: 1px solid #D6DADE;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+body .ai-buddy-container .section-button-box {
+  border: 0;
+  padding: 0;
+}
+body .ai-buddy-container .section-button-box-full .ai-buddy-button {
+  flex: 1;
+  margin: 0 5px;
+}
+body .ai-buddy-container .section-button-box-full .ai-buddy-button:first-child {
+  margin-left: 0;
+}
+body .ai-buddy-container .section-button-box-full .ai-buddy-button:last-child {
+  margin-right: 0;
+}
+body .ai-buddy-container .section .drop-down-box {
+  display: flex;
+  margin-bottom: 20px;
+}
+body .ai-buddy-container .section .drop-down-box .drop-down-column {
+  flex: 1;
+}
+body .ai-buddy-container .section .drop-down-box .drop-down-button {
+  text-align: right;
+}
+body .ai-buddy-container .section .drop-down-box .drop-down-button .ai-buddy-button {
+  margin-left: 10px;
+}
+body .ai-buddy-container .running-generation {
+  display: flex;
+  align-items: center;
+  padding: 29px 0 0;
+  margin-bottom: 20px;
+}
+body .ai-buddy-container .running-generation-loader {
+  flex: 1;
+  margin-right: 10px;
+}
+body .ai-buddy-container .running-generation-sub-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #27374E;
+}
+body .ai-buddy-container .running-generation .progress-bar-box {
+  margin-top: 5px;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(140, 153, 165, 0.5);
+  border-radius: 4px;
+  height: 4px;
+}
+body .ai-buddy-container .running-generation .progress-bar-box .progress-bar {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  background-color: #2985F7;
+  border-radius: 4px;
+  height: 4px;
+}
+body .ai-buddy-container .running-generation-count {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #2985F7;
+}
+body .ai-buddy-container-row {
+  display: flex;
+  margin: 0 -10px;
+}
+body .ai-buddy-container-content {
+  flex: 1;
+  padding: 0 10px;
+}
+body .ai-buddy-container-sidebar {
+  position: sticky;
+  top: 43px;
+  align-self: flex-start;
+  width: 360px;
+  padding: 0 10px;
+}
+body .toplevel_page_ai_buddy_content_builder.wp-has-submenu .wp-menu-image, body .toplevel_page_ai_buddy_content_builder.menu-top .wp-menu-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .toplevel_page_ai_buddy_content_builder.wp-has-submenu .wp-menu-image img, body .toplevel_page_ai_buddy_content_builder.menu-top .wp-menu-image img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  padding: 0 !important;
+  opacity: 1 !important;
+}
+body.toplevel_page_ai_buddy_content_builder, body.aibud-wp_page_ai_buddy_content_builder, body.aibud-wp_page_ai_buddy_image_generator, body.aibud-wp_page_ai_buddy_playground, body.aibud-wp_page_ai_buddy_settings, body.posts_page_ai_buddy_content_builder, body.admin_page_ai_buddy_image_generator, body.admin_page_ai_buddy_playground, body.aibud-wp_page_ai_buddy_chatbot, body.aibud-wp_page_ai_buddy_fine_tuning, body.admin_page_ai_buddy_settings {
+  font-family: "San Francisco", "Arial", "Times New Roman", "Calibri";
+}
+body.toplevel_page_ai_buddy_content_builder input[type=text],
+body.toplevel_page_ai_buddy_content_builder input[type=email],
+body.toplevel_page_ai_buddy_content_builder input[type=phone],
+body.toplevel_page_ai_buddy_content_builder input[type=password],
+body.toplevel_page_ai_buddy_content_builder input[type=number],
+body.toplevel_page_ai_buddy_content_builder textarea, body.aibud-wp_page_ai_buddy_content_builder input[type=text],
+body.aibud-wp_page_ai_buddy_content_builder input[type=email],
+body.aibud-wp_page_ai_buddy_content_builder input[type=phone],
+body.aibud-wp_page_ai_buddy_content_builder input[type=password],
+body.aibud-wp_page_ai_buddy_content_builder input[type=number],
+body.aibud-wp_page_ai_buddy_content_builder textarea, body.aibud-wp_page_ai_buddy_image_generator input[type=text],
+body.aibud-wp_page_ai_buddy_image_generator input[type=email],
+body.aibud-wp_page_ai_buddy_image_generator input[type=phone],
+body.aibud-wp_page_ai_buddy_image_generator input[type=password],
+body.aibud-wp_page_ai_buddy_image_generator input[type=number],
+body.aibud-wp_page_ai_buddy_image_generator textarea, body.aibud-wp_page_ai_buddy_playground input[type=text],
+body.aibud-wp_page_ai_buddy_playground input[type=email],
+body.aibud-wp_page_ai_buddy_playground input[type=phone],
+body.aibud-wp_page_ai_buddy_playground input[type=password],
+body.aibud-wp_page_ai_buddy_playground input[type=number],
+body.aibud-wp_page_ai_buddy_playground textarea, body.aibud-wp_page_ai_buddy_settings input[type=text],
+body.aibud-wp_page_ai_buddy_settings input[type=email],
+body.aibud-wp_page_ai_buddy_settings input[type=phone],
+body.aibud-wp_page_ai_buddy_settings input[type=password],
+body.aibud-wp_page_ai_buddy_settings input[type=number],
+body.aibud-wp_page_ai_buddy_settings textarea, body.posts_page_ai_buddy_content_builder input[type=text],
+body.posts_page_ai_buddy_content_builder input[type=email],
+body.posts_page_ai_buddy_content_builder input[type=phone],
+body.posts_page_ai_buddy_content_builder input[type=password],
+body.posts_page_ai_buddy_content_builder input[type=number],
+body.posts_page_ai_buddy_content_builder textarea, body.admin_page_ai_buddy_image_generator input[type=text],
+body.admin_page_ai_buddy_image_generator input[type=email],
+body.admin_page_ai_buddy_image_generator input[type=phone],
+body.admin_page_ai_buddy_image_generator input[type=password],
+body.admin_page_ai_buddy_image_generator input[type=number],
+body.admin_page_ai_buddy_image_generator textarea, body.admin_page_ai_buddy_playground input[type=text],
+body.admin_page_ai_buddy_playground input[type=email],
+body.admin_page_ai_buddy_playground input[type=phone],
+body.admin_page_ai_buddy_playground input[type=password],
+body.admin_page_ai_buddy_playground input[type=number],
+body.admin_page_ai_buddy_playground textarea, body.aibud-wp_page_ai_buddy_chatbot input[type=text],
+body.aibud-wp_page_ai_buddy_chatbot input[type=email],
+body.aibud-wp_page_ai_buddy_chatbot input[type=phone],
+body.aibud-wp_page_ai_buddy_chatbot input[type=password],
+body.aibud-wp_page_ai_buddy_chatbot input[type=number],
+body.aibud-wp_page_ai_buddy_chatbot textarea, body.aibud-wp_page_ai_buddy_fine_tuning input[type=text],
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=email],
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=phone],
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=password],
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=number],
+body.aibud-wp_page_ai_buddy_fine_tuning textarea, body.admin_page_ai_buddy_settings input[type=text],
+body.admin_page_ai_buddy_settings input[type=email],
+body.admin_page_ai_buddy_settings input[type=phone],
+body.admin_page_ai_buddy_settings input[type=password],
+body.admin_page_ai_buddy_settings input[type=number],
+body.admin_page_ai_buddy_settings textarea {
+  display: block;
+  width: 100%;
+  padding: 11px 20px;
+  height: 40px;
+  resize: none;
+  outline: none;
+  box-shadow: none;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: #F6F9FC;
+  border: 1px solid #D6DADE;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #27374E;
+}
+body.toplevel_page_ai_buddy_content_builder input[type=text]:hover, body.toplevel_page_ai_buddy_content_builder input[type=text]:focus, body.toplevel_page_ai_buddy_content_builder input[type=text]:active,
+body.toplevel_page_ai_buddy_content_builder input[type=email]:hover,
+body.toplevel_page_ai_buddy_content_builder input[type=email]:focus,
+body.toplevel_page_ai_buddy_content_builder input[type=email]:active,
+body.toplevel_page_ai_buddy_content_builder input[type=phone]:hover,
+body.toplevel_page_ai_buddy_content_builder input[type=phone]:focus,
+body.toplevel_page_ai_buddy_content_builder input[type=phone]:active,
+body.toplevel_page_ai_buddy_content_builder input[type=password]:hover,
+body.toplevel_page_ai_buddy_content_builder input[type=password]:focus,
+body.toplevel_page_ai_buddy_content_builder input[type=password]:active,
+body.toplevel_page_ai_buddy_content_builder input[type=number]:hover,
+body.toplevel_page_ai_buddy_content_builder input[type=number]:focus,
+body.toplevel_page_ai_buddy_content_builder input[type=number]:active,
+body.toplevel_page_ai_buddy_content_builder textarea:hover,
+body.toplevel_page_ai_buddy_content_builder textarea:focus,
+body.toplevel_page_ai_buddy_content_builder textarea:active, body.aibud-wp_page_ai_buddy_content_builder input[type=text]:hover, body.aibud-wp_page_ai_buddy_content_builder input[type=text]:focus, body.aibud-wp_page_ai_buddy_content_builder input[type=text]:active,
+body.aibud-wp_page_ai_buddy_content_builder input[type=email]:hover,
+body.aibud-wp_page_ai_buddy_content_builder input[type=email]:focus,
+body.aibud-wp_page_ai_buddy_content_builder input[type=email]:active,
+body.aibud-wp_page_ai_buddy_content_builder input[type=phone]:hover,
+body.aibud-wp_page_ai_buddy_content_builder input[type=phone]:focus,
+body.aibud-wp_page_ai_buddy_content_builder input[type=phone]:active,
+body.aibud-wp_page_ai_buddy_content_builder input[type=password]:hover,
+body.aibud-wp_page_ai_buddy_content_builder input[type=password]:focus,
+body.aibud-wp_page_ai_buddy_content_builder input[type=password]:active,
+body.aibud-wp_page_ai_buddy_content_builder input[type=number]:hover,
+body.aibud-wp_page_ai_buddy_content_builder input[type=number]:focus,
+body.aibud-wp_page_ai_buddy_content_builder input[type=number]:active,
+body.aibud-wp_page_ai_buddy_content_builder textarea:hover,
+body.aibud-wp_page_ai_buddy_content_builder textarea:focus,
+body.aibud-wp_page_ai_buddy_content_builder textarea:active, body.aibud-wp_page_ai_buddy_image_generator input[type=text]:hover, body.aibud-wp_page_ai_buddy_image_generator input[type=text]:focus, body.aibud-wp_page_ai_buddy_image_generator input[type=text]:active,
+body.aibud-wp_page_ai_buddy_image_generator input[type=email]:hover,
+body.aibud-wp_page_ai_buddy_image_generator input[type=email]:focus,
+body.aibud-wp_page_ai_buddy_image_generator input[type=email]:active,
+body.aibud-wp_page_ai_buddy_image_generator input[type=phone]:hover,
+body.aibud-wp_page_ai_buddy_image_generator input[type=phone]:focus,
+body.aibud-wp_page_ai_buddy_image_generator input[type=phone]:active,
+body.aibud-wp_page_ai_buddy_image_generator input[type=password]:hover,
+body.aibud-wp_page_ai_buddy_image_generator input[type=password]:focus,
+body.aibud-wp_page_ai_buddy_image_generator input[type=password]:active,
+body.aibud-wp_page_ai_buddy_image_generator input[type=number]:hover,
+body.aibud-wp_page_ai_buddy_image_generator input[type=number]:focus,
+body.aibud-wp_page_ai_buddy_image_generator input[type=number]:active,
+body.aibud-wp_page_ai_buddy_image_generator textarea:hover,
+body.aibud-wp_page_ai_buddy_image_generator textarea:focus,
+body.aibud-wp_page_ai_buddy_image_generator textarea:active, body.aibud-wp_page_ai_buddy_playground input[type=text]:hover, body.aibud-wp_page_ai_buddy_playground input[type=text]:focus, body.aibud-wp_page_ai_buddy_playground input[type=text]:active,
+body.aibud-wp_page_ai_buddy_playground input[type=email]:hover,
+body.aibud-wp_page_ai_buddy_playground input[type=email]:focus,
+body.aibud-wp_page_ai_buddy_playground input[type=email]:active,
+body.aibud-wp_page_ai_buddy_playground input[type=phone]:hover,
+body.aibud-wp_page_ai_buddy_playground input[type=phone]:focus,
+body.aibud-wp_page_ai_buddy_playground input[type=phone]:active,
+body.aibud-wp_page_ai_buddy_playground input[type=password]:hover,
+body.aibud-wp_page_ai_buddy_playground input[type=password]:focus,
+body.aibud-wp_page_ai_buddy_playground input[type=password]:active,
+body.aibud-wp_page_ai_buddy_playground input[type=number]:hover,
+body.aibud-wp_page_ai_buddy_playground input[type=number]:focus,
+body.aibud-wp_page_ai_buddy_playground input[type=number]:active,
+body.aibud-wp_page_ai_buddy_playground textarea:hover,
+body.aibud-wp_page_ai_buddy_playground textarea:focus,
+body.aibud-wp_page_ai_buddy_playground textarea:active, body.aibud-wp_page_ai_buddy_settings input[type=text]:hover, body.aibud-wp_page_ai_buddy_settings input[type=text]:focus, body.aibud-wp_page_ai_buddy_settings input[type=text]:active,
+body.aibud-wp_page_ai_buddy_settings input[type=email]:hover,
+body.aibud-wp_page_ai_buddy_settings input[type=email]:focus,
+body.aibud-wp_page_ai_buddy_settings input[type=email]:active,
+body.aibud-wp_page_ai_buddy_settings input[type=phone]:hover,
+body.aibud-wp_page_ai_buddy_settings input[type=phone]:focus,
+body.aibud-wp_page_ai_buddy_settings input[type=phone]:active,
+body.aibud-wp_page_ai_buddy_settings input[type=password]:hover,
+body.aibud-wp_page_ai_buddy_settings input[type=password]:focus,
+body.aibud-wp_page_ai_buddy_settings input[type=password]:active,
+body.aibud-wp_page_ai_buddy_settings input[type=number]:hover,
+body.aibud-wp_page_ai_buddy_settings input[type=number]:focus,
+body.aibud-wp_page_ai_buddy_settings input[type=number]:active,
+body.aibud-wp_page_ai_buddy_settings textarea:hover,
+body.aibud-wp_page_ai_buddy_settings textarea:focus,
+body.aibud-wp_page_ai_buddy_settings textarea:active, body.posts_page_ai_buddy_content_builder input[type=text]:hover, body.posts_page_ai_buddy_content_builder input[type=text]:focus, body.posts_page_ai_buddy_content_builder input[type=text]:active,
+body.posts_page_ai_buddy_content_builder input[type=email]:hover,
+body.posts_page_ai_buddy_content_builder input[type=email]:focus,
+body.posts_page_ai_buddy_content_builder input[type=email]:active,
+body.posts_page_ai_buddy_content_builder input[type=phone]:hover,
+body.posts_page_ai_buddy_content_builder input[type=phone]:focus,
+body.posts_page_ai_buddy_content_builder input[type=phone]:active,
+body.posts_page_ai_buddy_content_builder input[type=password]:hover,
+body.posts_page_ai_buddy_content_builder input[type=password]:focus,
+body.posts_page_ai_buddy_content_builder input[type=password]:active,
+body.posts_page_ai_buddy_content_builder input[type=number]:hover,
+body.posts_page_ai_buddy_content_builder input[type=number]:focus,
+body.posts_page_ai_buddy_content_builder input[type=number]:active,
+body.posts_page_ai_buddy_content_builder textarea:hover,
+body.posts_page_ai_buddy_content_builder textarea:focus,
+body.posts_page_ai_buddy_content_builder textarea:active, body.admin_page_ai_buddy_image_generator input[type=text]:hover, body.admin_page_ai_buddy_image_generator input[type=text]:focus, body.admin_page_ai_buddy_image_generator input[type=text]:active,
+body.admin_page_ai_buddy_image_generator input[type=email]:hover,
+body.admin_page_ai_buddy_image_generator input[type=email]:focus,
+body.admin_page_ai_buddy_image_generator input[type=email]:active,
+body.admin_page_ai_buddy_image_generator input[type=phone]:hover,
+body.admin_page_ai_buddy_image_generator input[type=phone]:focus,
+body.admin_page_ai_buddy_image_generator input[type=phone]:active,
+body.admin_page_ai_buddy_image_generator input[type=password]:hover,
+body.admin_page_ai_buddy_image_generator input[type=password]:focus,
+body.admin_page_ai_buddy_image_generator input[type=password]:active,
+body.admin_page_ai_buddy_image_generator input[type=number]:hover,
+body.admin_page_ai_buddy_image_generator input[type=number]:focus,
+body.admin_page_ai_buddy_image_generator input[type=number]:active,
+body.admin_page_ai_buddy_image_generator textarea:hover,
+body.admin_page_ai_buddy_image_generator textarea:focus,
+body.admin_page_ai_buddy_image_generator textarea:active, body.admin_page_ai_buddy_playground input[type=text]:hover, body.admin_page_ai_buddy_playground input[type=text]:focus, body.admin_page_ai_buddy_playground input[type=text]:active,
+body.admin_page_ai_buddy_playground input[type=email]:hover,
+body.admin_page_ai_buddy_playground input[type=email]:focus,
+body.admin_page_ai_buddy_playground input[type=email]:active,
+body.admin_page_ai_buddy_playground input[type=phone]:hover,
+body.admin_page_ai_buddy_playground input[type=phone]:focus,
+body.admin_page_ai_buddy_playground input[type=phone]:active,
+body.admin_page_ai_buddy_playground input[type=password]:hover,
+body.admin_page_ai_buddy_playground input[type=password]:focus,
+body.admin_page_ai_buddy_playground input[type=password]:active,
+body.admin_page_ai_buddy_playground input[type=number]:hover,
+body.admin_page_ai_buddy_playground input[type=number]:focus,
+body.admin_page_ai_buddy_playground input[type=number]:active,
+body.admin_page_ai_buddy_playground textarea:hover,
+body.admin_page_ai_buddy_playground textarea:focus,
+body.admin_page_ai_buddy_playground textarea:active, body.aibud-wp_page_ai_buddy_chatbot input[type=text]:hover, body.aibud-wp_page_ai_buddy_chatbot input[type=text]:focus, body.aibud-wp_page_ai_buddy_chatbot input[type=text]:active,
+body.aibud-wp_page_ai_buddy_chatbot input[type=email]:hover,
+body.aibud-wp_page_ai_buddy_chatbot input[type=email]:focus,
+body.aibud-wp_page_ai_buddy_chatbot input[type=email]:active,
+body.aibud-wp_page_ai_buddy_chatbot input[type=phone]:hover,
+body.aibud-wp_page_ai_buddy_chatbot input[type=phone]:focus,
+body.aibud-wp_page_ai_buddy_chatbot input[type=phone]:active,
+body.aibud-wp_page_ai_buddy_chatbot input[type=password]:hover,
+body.aibud-wp_page_ai_buddy_chatbot input[type=password]:focus,
+body.aibud-wp_page_ai_buddy_chatbot input[type=password]:active,
+body.aibud-wp_page_ai_buddy_chatbot input[type=number]:hover,
+body.aibud-wp_page_ai_buddy_chatbot input[type=number]:focus,
+body.aibud-wp_page_ai_buddy_chatbot input[type=number]:active,
+body.aibud-wp_page_ai_buddy_chatbot textarea:hover,
+body.aibud-wp_page_ai_buddy_chatbot textarea:focus,
+body.aibud-wp_page_ai_buddy_chatbot textarea:active, body.aibud-wp_page_ai_buddy_fine_tuning input[type=text]:hover, body.aibud-wp_page_ai_buddy_fine_tuning input[type=text]:focus, body.aibud-wp_page_ai_buddy_fine_tuning input[type=text]:active,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=email]:hover,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=email]:focus,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=email]:active,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=phone]:hover,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=phone]:focus,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=phone]:active,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=password]:hover,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=password]:focus,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=password]:active,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=number]:hover,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=number]:focus,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=number]:active,
+body.aibud-wp_page_ai_buddy_fine_tuning textarea:hover,
+body.aibud-wp_page_ai_buddy_fine_tuning textarea:focus,
+body.aibud-wp_page_ai_buddy_fine_tuning textarea:active, body.admin_page_ai_buddy_settings input[type=text]:hover, body.admin_page_ai_buddy_settings input[type=text]:focus, body.admin_page_ai_buddy_settings input[type=text]:active,
+body.admin_page_ai_buddy_settings input[type=email]:hover,
+body.admin_page_ai_buddy_settings input[type=email]:focus,
+body.admin_page_ai_buddy_settings input[type=email]:active,
+body.admin_page_ai_buddy_settings input[type=phone]:hover,
+body.admin_page_ai_buddy_settings input[type=phone]:focus,
+body.admin_page_ai_buddy_settings input[type=phone]:active,
+body.admin_page_ai_buddy_settings input[type=password]:hover,
+body.admin_page_ai_buddy_settings input[type=password]:focus,
+body.admin_page_ai_buddy_settings input[type=password]:active,
+body.admin_page_ai_buddy_settings input[type=number]:hover,
+body.admin_page_ai_buddy_settings input[type=number]:focus,
+body.admin_page_ai_buddy_settings input[type=number]:active,
+body.admin_page_ai_buddy_settings textarea:hover,
+body.admin_page_ai_buddy_settings textarea:focus,
+body.admin_page_ai_buddy_settings textarea:active {
+  border: 1px solid #D6DADE;
+  box-shadow: none;
+}
+body.toplevel_page_ai_buddy_content_builder input[type=text]::-webkit-input-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=email]::-webkit-input-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=phone]::-webkit-input-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=password]::-webkit-input-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=number]::-webkit-input-placeholder,
+body.toplevel_page_ai_buddy_content_builder textarea::-webkit-input-placeholder, body.aibud-wp_page_ai_buddy_content_builder input[type=text]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=email]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=phone]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=password]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=number]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder textarea::-webkit-input-placeholder, body.aibud-wp_page_ai_buddy_image_generator input[type=text]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=email]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=phone]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=password]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=number]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator textarea::-webkit-input-placeholder, body.aibud-wp_page_ai_buddy_playground input[type=text]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=email]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=phone]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=password]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=number]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_playground textarea::-webkit-input-placeholder, body.aibud-wp_page_ai_buddy_settings input[type=text]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=email]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=phone]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=password]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=number]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_settings textarea::-webkit-input-placeholder, body.posts_page_ai_buddy_content_builder input[type=text]::-webkit-input-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=email]::-webkit-input-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=phone]::-webkit-input-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=password]::-webkit-input-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=number]::-webkit-input-placeholder,
+body.posts_page_ai_buddy_content_builder textarea::-webkit-input-placeholder, body.admin_page_ai_buddy_image_generator input[type=text]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=email]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=phone]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=password]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=number]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_image_generator textarea::-webkit-input-placeholder, body.admin_page_ai_buddy_playground input[type=text]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_playground input[type=email]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_playground input[type=phone]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_playground input[type=password]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_playground input[type=number]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_playground textarea::-webkit-input-placeholder, body.aibud-wp_page_ai_buddy_chatbot input[type=text]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=email]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=phone]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=password]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=number]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot textarea::-webkit-input-placeholder, body.aibud-wp_page_ai_buddy_fine_tuning input[type=text]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=email]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=phone]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=password]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=number]::-webkit-input-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning textarea::-webkit-input-placeholder, body.admin_page_ai_buddy_settings input[type=text]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_settings input[type=email]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_settings input[type=phone]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_settings input[type=password]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_settings input[type=number]::-webkit-input-placeholder,
+body.admin_page_ai_buddy_settings textarea::-webkit-input-placeholder {
+  color: #8C99A5;
+}
+body.toplevel_page_ai_buddy_content_builder input[type=text]::-moz-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=email]::-moz-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=phone]::-moz-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=password]::-moz-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=number]::-moz-placeholder,
+body.toplevel_page_ai_buddy_content_builder textarea::-moz-placeholder, body.aibud-wp_page_ai_buddy_content_builder input[type=text]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=email]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=phone]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=password]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=number]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder textarea::-moz-placeholder, body.aibud-wp_page_ai_buddy_image_generator input[type=text]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=email]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=phone]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=password]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=number]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator textarea::-moz-placeholder, body.aibud-wp_page_ai_buddy_playground input[type=text]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=email]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=phone]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=password]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=number]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_playground textarea::-moz-placeholder, body.aibud-wp_page_ai_buddy_settings input[type=text]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=email]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=phone]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=password]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=number]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_settings textarea::-moz-placeholder, body.posts_page_ai_buddy_content_builder input[type=text]::-moz-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=email]::-moz-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=phone]::-moz-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=password]::-moz-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=number]::-moz-placeholder,
+body.posts_page_ai_buddy_content_builder textarea::-moz-placeholder, body.admin_page_ai_buddy_image_generator input[type=text]::-moz-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=email]::-moz-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=phone]::-moz-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=password]::-moz-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=number]::-moz-placeholder,
+body.admin_page_ai_buddy_image_generator textarea::-moz-placeholder, body.admin_page_ai_buddy_playground input[type=text]::-moz-placeholder,
+body.admin_page_ai_buddy_playground input[type=email]::-moz-placeholder,
+body.admin_page_ai_buddy_playground input[type=phone]::-moz-placeholder,
+body.admin_page_ai_buddy_playground input[type=password]::-moz-placeholder,
+body.admin_page_ai_buddy_playground input[type=number]::-moz-placeholder,
+body.admin_page_ai_buddy_playground textarea::-moz-placeholder, body.aibud-wp_page_ai_buddy_chatbot input[type=text]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=email]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=phone]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=password]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=number]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot textarea::-moz-placeholder, body.aibud-wp_page_ai_buddy_fine_tuning input[type=text]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=email]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=phone]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=password]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=number]::-moz-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning textarea::-moz-placeholder, body.admin_page_ai_buddy_settings input[type=text]::-moz-placeholder,
+body.admin_page_ai_buddy_settings input[type=email]::-moz-placeholder,
+body.admin_page_ai_buddy_settings input[type=phone]::-moz-placeholder,
+body.admin_page_ai_buddy_settings input[type=password]::-moz-placeholder,
+body.admin_page_ai_buddy_settings input[type=number]::-moz-placeholder,
+body.admin_page_ai_buddy_settings textarea::-moz-placeholder {
+  color: #8C99A5;
+}
+body.toplevel_page_ai_buddy_content_builder input[type=text]::-ms-input-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=email]::-ms-input-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=phone]::-ms-input-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=password]::-ms-input-placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=number]::-ms-input-placeholder,
+body.toplevel_page_ai_buddy_content_builder textarea::-ms-input-placeholder, body.aibud-wp_page_ai_buddy_content_builder input[type=text]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=email]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=phone]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=password]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=number]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_content_builder textarea::-ms-input-placeholder, body.aibud-wp_page_ai_buddy_image_generator input[type=text]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=email]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=phone]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=password]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=number]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_image_generator textarea::-ms-input-placeholder, body.aibud-wp_page_ai_buddy_playground input[type=text]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=email]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=phone]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=password]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=number]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_playground textarea::-ms-input-placeholder, body.aibud-wp_page_ai_buddy_settings input[type=text]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=email]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=phone]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=password]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=number]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_settings textarea::-ms-input-placeholder, body.posts_page_ai_buddy_content_builder input[type=text]::-ms-input-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=email]::-ms-input-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=phone]::-ms-input-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=password]::-ms-input-placeholder,
+body.posts_page_ai_buddy_content_builder input[type=number]::-ms-input-placeholder,
+body.posts_page_ai_buddy_content_builder textarea::-ms-input-placeholder, body.admin_page_ai_buddy_image_generator input[type=text]::-ms-input-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=email]::-ms-input-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=phone]::-ms-input-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=password]::-ms-input-placeholder,
+body.admin_page_ai_buddy_image_generator input[type=number]::-ms-input-placeholder,
+body.admin_page_ai_buddy_image_generator textarea::-ms-input-placeholder, body.admin_page_ai_buddy_playground input[type=text]::-ms-input-placeholder,
+body.admin_page_ai_buddy_playground input[type=email]::-ms-input-placeholder,
+body.admin_page_ai_buddy_playground input[type=phone]::-ms-input-placeholder,
+body.admin_page_ai_buddy_playground input[type=password]::-ms-input-placeholder,
+body.admin_page_ai_buddy_playground input[type=number]::-ms-input-placeholder,
+body.admin_page_ai_buddy_playground textarea::-ms-input-placeholder, body.aibud-wp_page_ai_buddy_chatbot input[type=text]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=email]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=phone]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=password]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=number]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_chatbot textarea::-ms-input-placeholder, body.aibud-wp_page_ai_buddy_fine_tuning input[type=text]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=email]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=phone]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=password]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=number]::-ms-input-placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning textarea::-ms-input-placeholder, body.admin_page_ai_buddy_settings input[type=text]::-ms-input-placeholder,
+body.admin_page_ai_buddy_settings input[type=email]::-ms-input-placeholder,
+body.admin_page_ai_buddy_settings input[type=phone]::-ms-input-placeholder,
+body.admin_page_ai_buddy_settings input[type=password]::-ms-input-placeholder,
+body.admin_page_ai_buddy_settings input[type=number]::-ms-input-placeholder,
+body.admin_page_ai_buddy_settings textarea::-ms-input-placeholder {
+  color: #8C99A5;
+}
+body.toplevel_page_ai_buddy_content_builder input[type=text]::placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=email]::placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=phone]::placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=password]::placeholder,
+body.toplevel_page_ai_buddy_content_builder input[type=number]::placeholder,
+body.toplevel_page_ai_buddy_content_builder textarea::placeholder, body.aibud-wp_page_ai_buddy_content_builder input[type=text]::placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=email]::placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=phone]::placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=password]::placeholder,
+body.aibud-wp_page_ai_buddy_content_builder input[type=number]::placeholder,
+body.aibud-wp_page_ai_buddy_content_builder textarea::placeholder, body.aibud-wp_page_ai_buddy_image_generator input[type=text]::placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=email]::placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=phone]::placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=password]::placeholder,
+body.aibud-wp_page_ai_buddy_image_generator input[type=number]::placeholder,
+body.aibud-wp_page_ai_buddy_image_generator textarea::placeholder, body.aibud-wp_page_ai_buddy_playground input[type=text]::placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=email]::placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=phone]::placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=password]::placeholder,
+body.aibud-wp_page_ai_buddy_playground input[type=number]::placeholder,
+body.aibud-wp_page_ai_buddy_playground textarea::placeholder, body.aibud-wp_page_ai_buddy_settings input[type=text]::placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=email]::placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=phone]::placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=password]::placeholder,
+body.aibud-wp_page_ai_buddy_settings input[type=number]::placeholder,
+body.aibud-wp_page_ai_buddy_settings textarea::placeholder, body.posts_page_ai_buddy_content_builder input[type=text]::placeholder,
+body.posts_page_ai_buddy_content_builder input[type=email]::placeholder,
+body.posts_page_ai_buddy_content_builder input[type=phone]::placeholder,
+body.posts_page_ai_buddy_content_builder input[type=password]::placeholder,
+body.posts_page_ai_buddy_content_builder input[type=number]::placeholder,
+body.posts_page_ai_buddy_content_builder textarea::placeholder, body.admin_page_ai_buddy_image_generator input[type=text]::placeholder,
+body.admin_page_ai_buddy_image_generator input[type=email]::placeholder,
+body.admin_page_ai_buddy_image_generator input[type=phone]::placeholder,
+body.admin_page_ai_buddy_image_generator input[type=password]::placeholder,
+body.admin_page_ai_buddy_image_generator input[type=number]::placeholder,
+body.admin_page_ai_buddy_image_generator textarea::placeholder, body.admin_page_ai_buddy_playground input[type=text]::placeholder,
+body.admin_page_ai_buddy_playground input[type=email]::placeholder,
+body.admin_page_ai_buddy_playground input[type=phone]::placeholder,
+body.admin_page_ai_buddy_playground input[type=password]::placeholder,
+body.admin_page_ai_buddy_playground input[type=number]::placeholder,
+body.admin_page_ai_buddy_playground textarea::placeholder, body.aibud-wp_page_ai_buddy_chatbot input[type=text]::placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=email]::placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=phone]::placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=password]::placeholder,
+body.aibud-wp_page_ai_buddy_chatbot input[type=number]::placeholder,
+body.aibud-wp_page_ai_buddy_chatbot textarea::placeholder, body.aibud-wp_page_ai_buddy_fine_tuning input[type=text]::placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=email]::placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=phone]::placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=password]::placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=number]::placeholder,
+body.aibud-wp_page_ai_buddy_fine_tuning textarea::placeholder, body.admin_page_ai_buddy_settings input[type=text]::placeholder,
+body.admin_page_ai_buddy_settings input[type=email]::placeholder,
+body.admin_page_ai_buddy_settings input[type=phone]::placeholder,
+body.admin_page_ai_buddy_settings input[type=password]::placeholder,
+body.admin_page_ai_buddy_settings input[type=number]::placeholder,
+body.admin_page_ai_buddy_settings textarea::placeholder {
+  color: #8C99A5;
+}
+body.toplevel_page_ai_buddy_content_builder input[type=text]:disabled, body.toplevel_page_ai_buddy_content_builder input[type=text][disabled],
+body.toplevel_page_ai_buddy_content_builder input[type=email]:disabled,
+body.toplevel_page_ai_buddy_content_builder input[type=email][disabled],
+body.toplevel_page_ai_buddy_content_builder input[type=phone]:disabled,
+body.toplevel_page_ai_buddy_content_builder input[type=phone][disabled],
+body.toplevel_page_ai_buddy_content_builder input[type=password]:disabled,
+body.toplevel_page_ai_buddy_content_builder input[type=password][disabled],
+body.toplevel_page_ai_buddy_content_builder input[type=number]:disabled,
+body.toplevel_page_ai_buddy_content_builder input[type=number][disabled],
+body.toplevel_page_ai_buddy_content_builder textarea:disabled,
+body.toplevel_page_ai_buddy_content_builder textarea[disabled], body.aibud-wp_page_ai_buddy_content_builder input[type=text]:disabled, body.aibud-wp_page_ai_buddy_content_builder input[type=text][disabled],
+body.aibud-wp_page_ai_buddy_content_builder input[type=email]:disabled,
+body.aibud-wp_page_ai_buddy_content_builder input[type=email][disabled],
+body.aibud-wp_page_ai_buddy_content_builder input[type=phone]:disabled,
+body.aibud-wp_page_ai_buddy_content_builder input[type=phone][disabled],
+body.aibud-wp_page_ai_buddy_content_builder input[type=password]:disabled,
+body.aibud-wp_page_ai_buddy_content_builder input[type=password][disabled],
+body.aibud-wp_page_ai_buddy_content_builder input[type=number]:disabled,
+body.aibud-wp_page_ai_buddy_content_builder input[type=number][disabled],
+body.aibud-wp_page_ai_buddy_content_builder textarea:disabled,
+body.aibud-wp_page_ai_buddy_content_builder textarea[disabled], body.aibud-wp_page_ai_buddy_image_generator input[type=text]:disabled, body.aibud-wp_page_ai_buddy_image_generator input[type=text][disabled],
+body.aibud-wp_page_ai_buddy_image_generator input[type=email]:disabled,
+body.aibud-wp_page_ai_buddy_image_generator input[type=email][disabled],
+body.aibud-wp_page_ai_buddy_image_generator input[type=phone]:disabled,
+body.aibud-wp_page_ai_buddy_image_generator input[type=phone][disabled],
+body.aibud-wp_page_ai_buddy_image_generator input[type=password]:disabled,
+body.aibud-wp_page_ai_buddy_image_generator input[type=password][disabled],
+body.aibud-wp_page_ai_buddy_image_generator input[type=number]:disabled,
+body.aibud-wp_page_ai_buddy_image_generator input[type=number][disabled],
+body.aibud-wp_page_ai_buddy_image_generator textarea:disabled,
+body.aibud-wp_page_ai_buddy_image_generator textarea[disabled], body.aibud-wp_page_ai_buddy_playground input[type=text]:disabled, body.aibud-wp_page_ai_buddy_playground input[type=text][disabled],
+body.aibud-wp_page_ai_buddy_playground input[type=email]:disabled,
+body.aibud-wp_page_ai_buddy_playground input[type=email][disabled],
+body.aibud-wp_page_ai_buddy_playground input[type=phone]:disabled,
+body.aibud-wp_page_ai_buddy_playground input[type=phone][disabled],
+body.aibud-wp_page_ai_buddy_playground input[type=password]:disabled,
+body.aibud-wp_page_ai_buddy_playground input[type=password][disabled],
+body.aibud-wp_page_ai_buddy_playground input[type=number]:disabled,
+body.aibud-wp_page_ai_buddy_playground input[type=number][disabled],
+body.aibud-wp_page_ai_buddy_playground textarea:disabled,
+body.aibud-wp_page_ai_buddy_playground textarea[disabled], body.aibud-wp_page_ai_buddy_settings input[type=text]:disabled, body.aibud-wp_page_ai_buddy_settings input[type=text][disabled],
+body.aibud-wp_page_ai_buddy_settings input[type=email]:disabled,
+body.aibud-wp_page_ai_buddy_settings input[type=email][disabled],
+body.aibud-wp_page_ai_buddy_settings input[type=phone]:disabled,
+body.aibud-wp_page_ai_buddy_settings input[type=phone][disabled],
+body.aibud-wp_page_ai_buddy_settings input[type=password]:disabled,
+body.aibud-wp_page_ai_buddy_settings input[type=password][disabled],
+body.aibud-wp_page_ai_buddy_settings input[type=number]:disabled,
+body.aibud-wp_page_ai_buddy_settings input[type=number][disabled],
+body.aibud-wp_page_ai_buddy_settings textarea:disabled,
+body.aibud-wp_page_ai_buddy_settings textarea[disabled], body.posts_page_ai_buddy_content_builder input[type=text]:disabled, body.posts_page_ai_buddy_content_builder input[type=text][disabled],
+body.posts_page_ai_buddy_content_builder input[type=email]:disabled,
+body.posts_page_ai_buddy_content_builder input[type=email][disabled],
+body.posts_page_ai_buddy_content_builder input[type=phone]:disabled,
+body.posts_page_ai_buddy_content_builder input[type=phone][disabled],
+body.posts_page_ai_buddy_content_builder input[type=password]:disabled,
+body.posts_page_ai_buddy_content_builder input[type=password][disabled],
+body.posts_page_ai_buddy_content_builder input[type=number]:disabled,
+body.posts_page_ai_buddy_content_builder input[type=number][disabled],
+body.posts_page_ai_buddy_content_builder textarea:disabled,
+body.posts_page_ai_buddy_content_builder textarea[disabled], body.admin_page_ai_buddy_image_generator input[type=text]:disabled, body.admin_page_ai_buddy_image_generator input[type=text][disabled],
+body.admin_page_ai_buddy_image_generator input[type=email]:disabled,
+body.admin_page_ai_buddy_image_generator input[type=email][disabled],
+body.admin_page_ai_buddy_image_generator input[type=phone]:disabled,
+body.admin_page_ai_buddy_image_generator input[type=phone][disabled],
+body.admin_page_ai_buddy_image_generator input[type=password]:disabled,
+body.admin_page_ai_buddy_image_generator input[type=password][disabled],
+body.admin_page_ai_buddy_image_generator input[type=number]:disabled,
+body.admin_page_ai_buddy_image_generator input[type=number][disabled],
+body.admin_page_ai_buddy_image_generator textarea:disabled,
+body.admin_page_ai_buddy_image_generator textarea[disabled], body.admin_page_ai_buddy_playground input[type=text]:disabled, body.admin_page_ai_buddy_playground input[type=text][disabled],
+body.admin_page_ai_buddy_playground input[type=email]:disabled,
+body.admin_page_ai_buddy_playground input[type=email][disabled],
+body.admin_page_ai_buddy_playground input[type=phone]:disabled,
+body.admin_page_ai_buddy_playground input[type=phone][disabled],
+body.admin_page_ai_buddy_playground input[type=password]:disabled,
+body.admin_page_ai_buddy_playground input[type=password][disabled],
+body.admin_page_ai_buddy_playground input[type=number]:disabled,
+body.admin_page_ai_buddy_playground input[type=number][disabled],
+body.admin_page_ai_buddy_playground textarea:disabled,
+body.admin_page_ai_buddy_playground textarea[disabled], body.aibud-wp_page_ai_buddy_chatbot input[type=text]:disabled, body.aibud-wp_page_ai_buddy_chatbot input[type=text][disabled],
+body.aibud-wp_page_ai_buddy_chatbot input[type=email]:disabled,
+body.aibud-wp_page_ai_buddy_chatbot input[type=email][disabled],
+body.aibud-wp_page_ai_buddy_chatbot input[type=phone]:disabled,
+body.aibud-wp_page_ai_buddy_chatbot input[type=phone][disabled],
+body.aibud-wp_page_ai_buddy_chatbot input[type=password]:disabled,
+body.aibud-wp_page_ai_buddy_chatbot input[type=password][disabled],
+body.aibud-wp_page_ai_buddy_chatbot input[type=number]:disabled,
+body.aibud-wp_page_ai_buddy_chatbot input[type=number][disabled],
+body.aibud-wp_page_ai_buddy_chatbot textarea:disabled,
+body.aibud-wp_page_ai_buddy_chatbot textarea[disabled], body.aibud-wp_page_ai_buddy_fine_tuning input[type=text]:disabled, body.aibud-wp_page_ai_buddy_fine_tuning input[type=text][disabled],
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=email]:disabled,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=email][disabled],
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=phone]:disabled,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=phone][disabled],
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=password]:disabled,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=password][disabled],
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=number]:disabled,
+body.aibud-wp_page_ai_buddy_fine_tuning input[type=number][disabled],
+body.aibud-wp_page_ai_buddy_fine_tuning textarea:disabled,
+body.aibud-wp_page_ai_buddy_fine_tuning textarea[disabled], body.admin_page_ai_buddy_settings input[type=text]:disabled, body.admin_page_ai_buddy_settings input[type=text][disabled],
+body.admin_page_ai_buddy_settings input[type=email]:disabled,
+body.admin_page_ai_buddy_settings input[type=email][disabled],
+body.admin_page_ai_buddy_settings input[type=phone]:disabled,
+body.admin_page_ai_buddy_settings input[type=phone][disabled],
+body.admin_page_ai_buddy_settings input[type=password]:disabled,
+body.admin_page_ai_buddy_settings input[type=password][disabled],
+body.admin_page_ai_buddy_settings input[type=number]:disabled,
+body.admin_page_ai_buddy_settings input[type=number][disabled],
+body.admin_page_ai_buddy_settings textarea:disabled,
+body.admin_page_ai_buddy_settings textarea[disabled] {
+  opacity: 0.5;
+}
+body.toplevel_page_ai_buddy_content_builder textarea, body.aibud-wp_page_ai_buddy_content_builder textarea, body.aibud-wp_page_ai_buddy_image_generator textarea, body.aibud-wp_page_ai_buddy_playground textarea, body.aibud-wp_page_ai_buddy_settings textarea, body.posts_page_ai_buddy_content_builder textarea, body.admin_page_ai_buddy_image_generator textarea, body.admin_page_ai_buddy_playground textarea, body.aibud-wp_page_ai_buddy_chatbot textarea, body.aibud-wp_page_ai_buddy_fine_tuning textarea, body.admin_page_ai_buddy_settings textarea {
+  min-height: 100px;
+}
+body.toplevel_page_ai_buddy_content_builder textarea::-webkit-scrollbar, body.aibud-wp_page_ai_buddy_content_builder textarea::-webkit-scrollbar, body.aibud-wp_page_ai_buddy_image_generator textarea::-webkit-scrollbar, body.aibud-wp_page_ai_buddy_playground textarea::-webkit-scrollbar, body.aibud-wp_page_ai_buddy_settings textarea::-webkit-scrollbar, body.posts_page_ai_buddy_content_builder textarea::-webkit-scrollbar, body.admin_page_ai_buddy_image_generator textarea::-webkit-scrollbar, body.admin_page_ai_buddy_playground textarea::-webkit-scrollbar, body.aibud-wp_page_ai_buddy_chatbot textarea::-webkit-scrollbar, body.aibud-wp_page_ai_buddy_fine_tuning textarea::-webkit-scrollbar, body.admin_page_ai_buddy_settings textarea::-webkit-scrollbar {
+  width: 4px;
+}
+body.toplevel_page_ai_buddy_content_builder textarea::-webkit-scrollbar-thumb, body.aibud-wp_page_ai_buddy_content_builder textarea::-webkit-scrollbar-thumb, body.aibud-wp_page_ai_buddy_image_generator textarea::-webkit-scrollbar-thumb, body.aibud-wp_page_ai_buddy_playground textarea::-webkit-scrollbar-thumb, body.aibud-wp_page_ai_buddy_settings textarea::-webkit-scrollbar-thumb, body.posts_page_ai_buddy_content_builder textarea::-webkit-scrollbar-thumb, body.admin_page_ai_buddy_image_generator textarea::-webkit-scrollbar-thumb, body.admin_page_ai_buddy_playground textarea::-webkit-scrollbar-thumb, body.aibud-wp_page_ai_buddy_chatbot textarea::-webkit-scrollbar-thumb, body.aibud-wp_page_ai_buddy_fine_tuning textarea::-webkit-scrollbar-thumb, body.admin_page_ai_buddy_settings textarea::-webkit-scrollbar-thumb {
+  background-color: rgba(140, 153, 165, 0.4);
+  border-radius: 10px;
+}
+body.toplevel_page_ai_buddy_content_builder textarea::-webkit-scrollbar-thumb:hover, body.aibud-wp_page_ai_buddy_content_builder textarea::-webkit-scrollbar-thumb:hover, body.aibud-wp_page_ai_buddy_image_generator textarea::-webkit-scrollbar-thumb:hover, body.aibud-wp_page_ai_buddy_playground textarea::-webkit-scrollbar-thumb:hover, body.aibud-wp_page_ai_buddy_settings textarea::-webkit-scrollbar-thumb:hover, body.posts_page_ai_buddy_content_builder textarea::-webkit-scrollbar-thumb:hover, body.admin_page_ai_buddy_image_generator textarea::-webkit-scrollbar-thumb:hover, body.admin_page_ai_buddy_playground textarea::-webkit-scrollbar-thumb:hover, body.aibud-wp_page_ai_buddy_chatbot textarea::-webkit-scrollbar-thumb:hover, body.aibud-wp_page_ai_buddy_fine_tuning textarea::-webkit-scrollbar-thumb:hover, body.admin_page_ai_buddy_settings textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #1E2A36;
+}
+body.toplevel_page_ai_buddy_content_builder textarea.high-altitude, body.aibud-wp_page_ai_buddy_content_builder textarea.high-altitude, body.aibud-wp_page_ai_buddy_image_generator textarea.high-altitude, body.aibud-wp_page_ai_buddy_playground textarea.high-altitude, body.aibud-wp_page_ai_buddy_settings textarea.high-altitude, body.posts_page_ai_buddy_content_builder textarea.high-altitude, body.admin_page_ai_buddy_image_generator textarea.high-altitude, body.admin_page_ai_buddy_playground textarea.high-altitude, body.aibud-wp_page_ai_buddy_chatbot textarea.high-altitude, body.aibud-wp_page_ai_buddy_fine_tuning textarea.high-altitude, body.admin_page_ai_buddy_settings textarea.high-altitude {
+  min-height: 500px;
+}
+body.toplevel_page_ai_buddy_content_builder .check-box, body.aibud-wp_page_ai_buddy_content_builder .check-box, body.aibud-wp_page_ai_buddy_image_generator .check-box, body.aibud-wp_page_ai_buddy_playground .check-box, body.aibud-wp_page_ai_buddy_settings .check-box, body.posts_page_ai_buddy_content_builder .check-box, body.admin_page_ai_buddy_image_generator .check-box, body.admin_page_ai_buddy_playground .check-box, body.aibud-wp_page_ai_buddy_chatbot .check-box, body.aibud-wp_page_ai_buddy_fine_tuning .check-box, body.admin_page_ai_buddy_settings .check-box {
+  display: flex;
+  align-items: center;
+}
+body.toplevel_page_ai_buddy_content_builder .check-box .checkbox, body.aibud-wp_page_ai_buddy_content_builder .check-box .checkbox, body.aibud-wp_page_ai_buddy_image_generator .check-box .checkbox, body.aibud-wp_page_ai_buddy_playground .check-box .checkbox, body.aibud-wp_page_ai_buddy_settings .check-box .checkbox, body.posts_page_ai_buddy_content_builder .check-box .checkbox, body.admin_page_ai_buddy_image_generator .check-box .checkbox, body.admin_page_ai_buddy_playground .check-box .checkbox, body.aibud-wp_page_ai_buddy_chatbot .check-box .checkbox, body.aibud-wp_page_ai_buddy_fine_tuning .check-box .checkbox, body.admin_page_ai_buddy_settings .check-box .checkbox {
+  opacity: 0;
+  position: absolute;
+}
+body.toplevel_page_ai_buddy_content_builder .check-box .checkbox + label, body.aibud-wp_page_ai_buddy_content_builder .check-box .checkbox + label, body.aibud-wp_page_ai_buddy_image_generator .check-box .checkbox + label, body.aibud-wp_page_ai_buddy_playground .check-box .checkbox + label, body.aibud-wp_page_ai_buddy_settings .check-box .checkbox + label, body.posts_page_ai_buddy_content_builder .check-box .checkbox + label, body.admin_page_ai_buddy_image_generator .check-box .checkbox + label, body.admin_page_ai_buddy_playground .check-box .checkbox + label, body.aibud-wp_page_ai_buddy_chatbot .check-box .checkbox + label, body.aibud-wp_page_ai_buddy_fine_tuning .check-box .checkbox + label, body.admin_page_ai_buddy_settings .check-box .checkbox + label {
+  position: relative;
+  display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: 0.4s ease;
+  height: 24px;
+  width: 49px;
+  border: 1px solid #8C99A5;
+  border-radius: 60px;
+  background-color: #F6F9FC;
+}
+body.toplevel_page_ai_buddy_content_builder .check-box .checkbox + label:before, body.aibud-wp_page_ai_buddy_content_builder .check-box .checkbox + label:before, body.aibud-wp_page_ai_buddy_image_generator .check-box .checkbox + label:before, body.aibud-wp_page_ai_buddy_playground .check-box .checkbox + label:before, body.aibud-wp_page_ai_buddy_settings .check-box .checkbox + label:before, body.posts_page_ai_buddy_content_builder .check-box .checkbox + label:before, body.admin_page_ai_buddy_image_generator .check-box .checkbox + label:before, body.admin_page_ai_buddy_playground .check-box .checkbox + label:before, body.aibud-wp_page_ai_buddy_chatbot .check-box .checkbox + label:before, body.aibud-wp_page_ai_buddy_fine_tuning .check-box .checkbox + label:before, body.admin_page_ai_buddy_settings .check-box .checkbox + label:before {
+  content: "";
+  display: block;
+  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+  height: 24px;
+  width: 49px;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+}
+body.toplevel_page_ai_buddy_content_builder .check-box .checkbox + label:after, body.aibud-wp_page_ai_buddy_content_builder .check-box .checkbox + label:after, body.aibud-wp_page_ai_buddy_image_generator .check-box .checkbox + label:after, body.aibud-wp_page_ai_buddy_playground .check-box .checkbox + label:after, body.aibud-wp_page_ai_buddy_settings .check-box .checkbox + label:after, body.posts_page_ai_buddy_content_builder .check-box .checkbox + label:after, body.admin_page_ai_buddy_image_generator .check-box .checkbox + label:after, body.admin_page_ai_buddy_playground .check-box .checkbox + label:after, body.aibud-wp_page_ai_buddy_chatbot .check-box .checkbox + label:after, body.aibud-wp_page_ai_buddy_fine_tuning .check-box .checkbox + label:after, body.admin_page_ai_buddy_settings .check-box .checkbox + label:after {
+  content: "";
+  position: absolute;
+  display: block;
+  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+  background: #8C99A5;
+  height: 18px;
+  width: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 4px;
+  border-radius: 60px;
+}
+body.toplevel_page_ai_buddy_content_builder .check-box .checkbox-text, body.aibud-wp_page_ai_buddy_content_builder .check-box .checkbox-text, body.aibud-wp_page_ai_buddy_image_generator .check-box .checkbox-text, body.aibud-wp_page_ai_buddy_playground .check-box .checkbox-text, body.aibud-wp_page_ai_buddy_settings .check-box .checkbox-text, body.posts_page_ai_buddy_content_builder .check-box .checkbox-text, body.admin_page_ai_buddy_image_generator .check-box .checkbox-text, body.admin_page_ai_buddy_playground .check-box .checkbox-text, body.aibud-wp_page_ai_buddy_chatbot .check-box .checkbox-text, body.aibud-wp_page_ai_buddy_fine_tuning .check-box .checkbox-text, body.admin_page_ai_buddy_settings .check-box .checkbox-text {
+  padding-left: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #27374E;
+}
+body.toplevel_page_ai_buddy_content_builder .check-box .checkbox:checked + label, body.aibud-wp_page_ai_buddy_content_builder .check-box .checkbox:checked + label, body.aibud-wp_page_ai_buddy_image_generator .check-box .checkbox:checked + label, body.aibud-wp_page_ai_buddy_playground .check-box .checkbox:checked + label, body.aibud-wp_page_ai_buddy_settings .check-box .checkbox:checked + label, body.posts_page_ai_buddy_content_builder .check-box .checkbox:checked + label, body.admin_page_ai_buddy_image_generator .check-box .checkbox:checked + label, body.admin_page_ai_buddy_playground .check-box .checkbox:checked + label, body.aibud-wp_page_ai_buddy_chatbot .check-box .checkbox:checked + label, body.aibud-wp_page_ai_buddy_fine_tuning .check-box .checkbox:checked + label, body.admin_page_ai_buddy_settings .check-box .checkbox:checked + label {
+  border-color: #2985F7;
+}
+body.toplevel_page_ai_buddy_content_builder .check-box .checkbox:checked + label:before, body.aibud-wp_page_ai_buddy_content_builder .check-box .checkbox:checked + label:before, body.aibud-wp_page_ai_buddy_image_generator .check-box .checkbox:checked + label:before, body.aibud-wp_page_ai_buddy_playground .check-box .checkbox:checked + label:before, body.aibud-wp_page_ai_buddy_settings .check-box .checkbox:checked + label:before, body.posts_page_ai_buddy_content_builder .check-box .checkbox:checked + label:before, body.admin_page_ai_buddy_image_generator .check-box .checkbox:checked + label:before, body.admin_page_ai_buddy_playground .check-box .checkbox:checked + label:before, body.aibud-wp_page_ai_buddy_chatbot .check-box .checkbox:checked + label:before, body.aibud-wp_page_ai_buddy_fine_tuning .check-box .checkbox:checked + label:before, body.admin_page_ai_buddy_settings .check-box .checkbox:checked + label:before {
+  background: #2985F7;
+  transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
+}
+body.toplevel_page_ai_buddy_content_builder .check-box .checkbox:checked + label:after, body.aibud-wp_page_ai_buddy_content_builder .check-box .checkbox:checked + label:after, body.aibud-wp_page_ai_buddy_image_generator .check-box .checkbox:checked + label:after, body.aibud-wp_page_ai_buddy_playground .check-box .checkbox:checked + label:after, body.aibud-wp_page_ai_buddy_settings .check-box .checkbox:checked + label:after, body.posts_page_ai_buddy_content_builder .check-box .checkbox:checked + label:after, body.admin_page_ai_buddy_image_generator .check-box .checkbox:checked + label:after, body.admin_page_ai_buddy_playground .check-box .checkbox:checked + label:after, body.aibud-wp_page_ai_buddy_chatbot .check-box .checkbox:checked + label:after, body.aibud-wp_page_ai_buddy_fine_tuning .check-box .checkbox:checked + label:after, body.admin_page_ai_buddy_settings .check-box .checkbox:checked + label:after {
+  background-color: #ffffff;
+  left: 26px;
+}
+body.toplevel_page_ai_buddy_content_builder .check-box .section-field-information, body.aibud-wp_page_ai_buddy_content_builder .check-box .section-field-information, body.aibud-wp_page_ai_buddy_image_generator .check-box .section-field-information, body.aibud-wp_page_ai_buddy_playground .check-box .section-field-information, body.aibud-wp_page_ai_buddy_settings .check-box .section-field-information, body.posts_page_ai_buddy_content_builder .check-box .section-field-information, body.admin_page_ai_buddy_image_generator .check-box .section-field-information, body.admin_page_ai_buddy_playground .check-box .section-field-information, body.aibud-wp_page_ai_buddy_chatbot .check-box .section-field-information, body.aibud-wp_page_ai_buddy_fine_tuning .check-box .section-field-information, body.admin_page_ai_buddy_settings .check-box .section-field-information {
+  margin-left: 30px;
+}
+body.toplevel_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select, body.aibud-wp_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select, body.aibud-wp_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select, body.aibud-wp_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select, body.aibud-wp_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select, body.posts_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select, body.admin_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select, body.admin_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select, body.aibud-wp_page_ai_buddy_chatbot.wp-core-ui select.ai-buddy-select, body.aibud-wp_page_ai_buddy_fine_tuning.wp-core-ui select.ai-buddy-select, body.admin_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select {
+  display: block;
+  width: 100%;
+  max-width: none;
+  background-color: #F6F9FC;
+  border: 1px solid #D6DADE;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 10px;
+  font-family: "San Francisco", "Arial", "Times New Roman", "Calibri";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #27374E;
+}
+body.toplevel_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:hover, body.toplevel_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:focus, body.toplevel_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:active, body.aibud-wp_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:hover, body.aibud-wp_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:focus, body.aibud-wp_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:active, body.aibud-wp_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select:hover, body.aibud-wp_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select:focus, body.aibud-wp_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select:active, body.aibud-wp_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select:hover, body.aibud-wp_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select:focus, body.aibud-wp_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select:active, body.aibud-wp_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select:hover, body.aibud-wp_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select:focus, body.aibud-wp_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select:active, body.posts_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:hover, body.posts_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:focus, body.posts_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:active, body.admin_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select:hover, body.admin_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select:focus, body.admin_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select:active, body.admin_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select:hover, body.admin_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select:focus, body.admin_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select:active, body.aibud-wp_page_ai_buddy_chatbot.wp-core-ui select.ai-buddy-select:hover, body.aibud-wp_page_ai_buddy_chatbot.wp-core-ui select.ai-buddy-select:focus, body.aibud-wp_page_ai_buddy_chatbot.wp-core-ui select.ai-buddy-select:active, body.aibud-wp_page_ai_buddy_fine_tuning.wp-core-ui select.ai-buddy-select:hover, body.aibud-wp_page_ai_buddy_fine_tuning.wp-core-ui select.ai-buddy-select:focus, body.aibud-wp_page_ai_buddy_fine_tuning.wp-core-ui select.ai-buddy-select:active, body.admin_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select:hover, body.admin_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select:focus, body.admin_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select:active {
+  border: 1px solid #D6DADE;
+  box-shadow: none;
+  color: #27374E;
+}
+body.toplevel_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:disabled, body.toplevel_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select[disabled], body.aibud-wp_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:disabled, body.aibud-wp_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select[disabled], body.aibud-wp_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select:disabled, body.aibud-wp_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select[disabled], body.aibud-wp_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select:disabled, body.aibud-wp_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select[disabled], body.aibud-wp_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select:disabled, body.aibud-wp_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select[disabled], body.posts_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select:disabled, body.posts_page_ai_buddy_content_builder.wp-core-ui select.ai-buddy-select[disabled], body.admin_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select:disabled, body.admin_page_ai_buddy_image_generator.wp-core-ui select.ai-buddy-select[disabled], body.admin_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select:disabled, body.admin_page_ai_buddy_playground.wp-core-ui select.ai-buddy-select[disabled], body.aibud-wp_page_ai_buddy_chatbot.wp-core-ui select.ai-buddy-select:disabled, body.aibud-wp_page_ai_buddy_chatbot.wp-core-ui select.ai-buddy-select[disabled], body.aibud-wp_page_ai_buddy_fine_tuning.wp-core-ui select.ai-buddy-select:disabled, body.aibud-wp_page_ai_buddy_fine_tuning.wp-core-ui select.ai-buddy-select[disabled], body.admin_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select:disabled, body.admin_page_ai_buddy_settings.wp-core-ui select.ai-buddy-select[disabled] {
+  color: #8C99A5;
+}
+body .ai-buddy-accordion-section .section-title {
+  margin-bottom: 0;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+body .ai-buddy-accordion-section .section-title var {
+  background-color: #aded10;
+  color: #081322;
+}
+body .ai-buddy-accordion-section .section-title.active:after {
+  content: "−";
+}
+body .ai-buddy-accordion-section .section-title.active ~ .section-content {
+  max-height: 600px;
+}
+body .ai-buddy-accordion-section .section-title:after {
+  content: "+";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+body .ai-buddy-accordion-section .section-subtitle {
+  margin-bottom: 10px !important;
+}
+body .ai-buddy-accordion-section .section-subtitle label {
+  margin-left: 10px;
+}
+body .ai-buddy-accordion-section .section-subtitle var {
+  display: inline;
+  margin-left: 5px;
+}
+body .ai-buddy-accordion-section .section-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  transition-delay: 0s;
+}
+body .ai-buddy-accordion-section .section-content input, body .ai-buddy-accordion-section .section-content select {
+  margin-left: 0;
+  margin-right: 0;
+}
+body .ai-buddy-accordion-section .section-content .section-field:first-child, body .ai-buddy-accordion-section .section-content .section-subtitle:first-child {
+  margin-top: 20px;
+}
+body .ai-buddy-blocked-input {
+  position: relative;
+}
+body .ai-buddy-blocked-input a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  cursor: no-drop;
+}
+
+body .ai-buddy-modal-window input[type=text],
+body .ai-buddy-modal-window input[type=email],
+body .ai-buddy-modal-window input[type=phone],
+body .ai-buddy-modal-window input[type=password],
+body .ai-buddy-modal-window input[type=number],
+body .ai-buddy-modal-window textarea {
+  display: block;
+  width: 100%;
+  padding: 11px 20px;
+  height: 40px;
+  resize: none;
+  outline: none;
+  box-shadow: none;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: #F6F9FC;
+  border: 1px solid #D6DADE;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #27374E;
+}
+body .ai-buddy-modal-window input[type=text]:hover, body .ai-buddy-modal-window input[type=text]:focus, body .ai-buddy-modal-window input[type=text]:active,
+body .ai-buddy-modal-window input[type=email]:hover,
+body .ai-buddy-modal-window input[type=email]:focus,
+body .ai-buddy-modal-window input[type=email]:active,
+body .ai-buddy-modal-window input[type=phone]:hover,
+body .ai-buddy-modal-window input[type=phone]:focus,
+body .ai-buddy-modal-window input[type=phone]:active,
+body .ai-buddy-modal-window input[type=password]:hover,
+body .ai-buddy-modal-window input[type=password]:focus,
+body .ai-buddy-modal-window input[type=password]:active,
+body .ai-buddy-modal-window input[type=number]:hover,
+body .ai-buddy-modal-window input[type=number]:focus,
+body .ai-buddy-modal-window input[type=number]:active,
+body .ai-buddy-modal-window textarea:hover,
+body .ai-buddy-modal-window textarea:focus,
+body .ai-buddy-modal-window textarea:active {
+  border: 1px solid #D6DADE;
+  box-shadow: none;
+}
+body .ai-buddy-modal-window input[type=text]::-webkit-input-placeholder,
+body .ai-buddy-modal-window input[type=email]::-webkit-input-placeholder,
+body .ai-buddy-modal-window input[type=phone]::-webkit-input-placeholder,
+body .ai-buddy-modal-window input[type=password]::-webkit-input-placeholder,
+body .ai-buddy-modal-window input[type=number]::-webkit-input-placeholder,
+body .ai-buddy-modal-window textarea::-webkit-input-placeholder {
+  color: #8C99A5;
+}
+body .ai-buddy-modal-window input[type=text]::-moz-placeholder,
+body .ai-buddy-modal-window input[type=email]::-moz-placeholder,
+body .ai-buddy-modal-window input[type=phone]::-moz-placeholder,
+body .ai-buddy-modal-window input[type=password]::-moz-placeholder,
+body .ai-buddy-modal-window input[type=number]::-moz-placeholder,
+body .ai-buddy-modal-window textarea::-moz-placeholder {
+  color: #8C99A5;
+}
+body .ai-buddy-modal-window input[type=text]::-ms-input-placeholder,
+body .ai-buddy-modal-window input[type=email]::-ms-input-placeholder,
+body .ai-buddy-modal-window input[type=phone]::-ms-input-placeholder,
+body .ai-buddy-modal-window input[type=password]::-ms-input-placeholder,
+body .ai-buddy-modal-window input[type=number]::-ms-input-placeholder,
+body .ai-buddy-modal-window textarea::-ms-input-placeholder {
+  color: #8C99A5;
+}
+body .ai-buddy-modal-window input[type=text]::placeholder,
+body .ai-buddy-modal-window input[type=email]::placeholder,
+body .ai-buddy-modal-window input[type=phone]::placeholder,
+body .ai-buddy-modal-window input[type=password]::placeholder,
+body .ai-buddy-modal-window input[type=number]::placeholder,
+body .ai-buddy-modal-window textarea::placeholder {
+  color: #8C99A5;
+}
+body .ai-buddy-modal-window input[type=text]:disabled, body .ai-buddy-modal-window input[type=text][disabled],
+body .ai-buddy-modal-window input[type=email]:disabled,
+body .ai-buddy-modal-window input[type=email][disabled],
+body .ai-buddy-modal-window input[type=phone]:disabled,
+body .ai-buddy-modal-window input[type=phone][disabled],
+body .ai-buddy-modal-window input[type=password]:disabled,
+body .ai-buddy-modal-window input[type=password][disabled],
+body .ai-buddy-modal-window input[type=number]:disabled,
+body .ai-buddy-modal-window input[type=number][disabled],
+body .ai-buddy-modal-window textarea:disabled,
+body .ai-buddy-modal-window textarea[disabled] {
+  opacity: 0.5;
+}
+body .ai-buddy-modal-window textarea {
+  min-height: 100px;
+}
+body .ai-buddy-modal-window textarea::-webkit-scrollbar {
+  width: 4px;
+}
+body .ai-buddy-modal-window textarea::-webkit-scrollbar-thumb {
+  background-color: rgba(140, 153, 165, 0.4);
+  border-radius: 10px;
+}
+body .ai-buddy-modal-window textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #1E2A36;
+}
+body .ai-buddy-modal-window textarea.high-altitude {
+  min-height: 500px;
+}
+body .ai-buddy-modal-window .check-box {
+  display: flex;
+  align-items: center;
+}
+body .ai-buddy-modal-window .check-box .checkbox {
+  opacity: 0;
+  position: absolute;
+}
+body .ai-buddy-modal-window .check-box .checkbox + label {
+  position: relative;
+  display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: 0.4s ease;
+  height: 24px;
+  width: 49px;
+  border: 1px solid #8C99A5;
+  border-radius: 60px;
+  background-color: #F6F9FC;
+}
+body .ai-buddy-modal-window .check-box .checkbox + label:before {
+  content: "";
+  position: absolute;
+  display: block;
+  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+  height: 24px;
+  width: 49px;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+}
+body .ai-buddy-modal-window .check-box .checkbox + label:after {
+  content: "";
+  position: absolute;
+  display: block;
+  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+  background: #8C99A5;
+  height: 18px;
+  width: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 4px;
+  border-radius: 60px;
+}
+body .ai-buddy-modal-window .check-box .checkbox-text {
+  padding-left: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #27374E;
+}
+body .ai-buddy-modal-window .check-box .checkbox:checked + label {
+  border-color: #2985F7;
+}
+body .ai-buddy-modal-window .check-box .checkbox:checked + label:before {
+  background: #2985F7;
+  transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
+}
+body .ai-buddy-modal-window .check-box .checkbox:checked + label:after {
+  background-color: #ffffff;
+  left: 26px;
+}
+body .ai-buddy-modal-window .check-box .section-field-information {
+  margin-left: 30px;
+}
+body .ai-buddy-modal-window.wp-core-ui #wpwrap {
+  overflow: hidden;
+}
+body .ai-buddy-modal-window.wp-core-ui select.ai-buddy-select {
+  display: block;
+  width: 100%;
+  max-width: none;
+  background-color: #F6F9FC;
+  border: 1px solid #D6DADE;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 10px;
+  font-family: "San Francisco", "Arial", "Times New Roman", "Calibri";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #27374E;
+}
+body .ai-buddy-modal-window.wp-core-ui select.ai-buddy-select:hover, body .ai-buddy-modal-window.wp-core-ui select.ai-buddy-select:focus, body .ai-buddy-modal-window.wp-core-ui select.ai-buddy-select:active {
+  border: 1px solid #D6DADE;
+  box-shadow: none;
+  color: #27374E;
+}
+body .ai-buddy-modal-window.wp-core-ui select.ai-buddy-select:disabled, body .ai-buddy-modal-window.wp-core-ui select.ai-buddy-select[disabled] {
+  color: #8C99A5;
+}
+body .ai-buddy-modal-window-wrapper {
+  position: fixed;
+  bottom: -100%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  transition: all 0.4s;
+  z-index: 9999;
+  width: 460px;
+  max-height: 800px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding: 24px 20px;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  resize: none;
+}
+body .ai-buddy-modal-window-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+body .ai-buddy-modal-window-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(140, 153, 165, 0.4);
+  border-radius: 10px;
+}
+body .ai-buddy-modal-window-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #1E2A36;
+}
+@media (max-height: 780px) {
+  body .ai-buddy-modal-window-wrapper {
+    max-height: 600px;
+  }
+}
+body .ai-buddy-modal-window-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.6s;
+  background-color: rgba(30, 42, 54, 0.7);
+  visibility: hidden;
+  opacity: 0;
+}
+body .ai-buddy-modal-window .modal-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #D6DADE;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #8C99A5;
+}
+body .ai-buddy-modal-window .modal-header .section-title {
+  flex: 1;
+}
+body .ai-buddy-modal-window .modal-header .modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #F6F9FC;
+  color: #8C99A5;
+}
+body .ai-buddy-modal-window .ai-buddy-container {
+  padding: 0;
+}
+body .ai-buddy-modal-window .ai-buddy-container .section {
+  padding: 0;
+}
+body .ai-buddy-modal-window .ai-buddy-container .section .response-message {
+  padding: 30px 0;
+}
+body .ai-buddy-modal-window .ai-buddy-container .section .response-message.align-center {
+  text-align: center;
+}
+body .ai-buddy-modal-window .ai-buddy-container .section .response-message-icon {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #ECFFCC;
+  margin-bottom: 20px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #88C12C;
+}
+body .ai-buddy-modal-window.server-error .ai-buddy-container .section .response-message-icon {
+  background-color: rgba(224, 49, 49, 0.2);
+  color: #E03131;
+}
+body .ai-buddy-modal-window.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+}
+body .ai-buddy-modal-window.active .ai-buddy-modal-window-wrapper {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+body .ai-buddy-modal-window.active .ai-buddy-modal-window-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.postbox#ai_buddy-metadata .postbox-header h2 {
+  padding: 5px 0 5px 50px;
+  background: url("../images/ai-buddy.png") no-repeat 16px 50%;
+  background-size: 26px;
+}
+.postbox#ai_buddy-metadata .inside {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+.postbox .ai-buddy-button.button-full {
+  margin-top: 10px;
+}
+.postbox .ai-buddy-meta-box-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+.postbox .ai-buddy-modal-window.post-generate-popup .empty-content {
+  margin-bottom: 0;
+}
+.postbox .ai-buddy-modal-window.post-generate-popup .empty-content .section-button-box {
+  margin-bottom: 0;
+}
+.postbox .ai-buddy-modal-window.post-generate-popup .section-title,
+.postbox .ai-buddy-modal-window.post-generate-popup .empty-content,
+.postbox .ai-buddy-modal-window.post-generate-popup .excerpt-empty,
+.postbox .ai-buddy-modal-window.post-generate-popup .generate-new-post,
+.postbox .ai-buddy-modal-window.post-generate-popup .error-content {
+  display: none;
+}
+.postbox .ai-buddy-modal-window.post-generate-popup .ai-buddy-button.right-alignment {
+  display: none;
+}
+.postbox .ai-buddy-modal-window.post-generate-popup.popup-for-titles .popup-post-title,
+.postbox .ai-buddy-modal-window.post-generate-popup.popup-for-titles .post-titles-generate {
+  display: block;
+}
+.postbox .ai-buddy-modal-window.post-generate-popup.popup-for-excerpts .popup-post-excerpt-title,
+.postbox .ai-buddy-modal-window.post-generate-popup.popup-for-excerpts .post-excerpts-generate {
+  display: block;
+}
+.postbox .ai-buddy-modal-window.post-generate-popup.popup-for-images .popup-post-image-title,
+.postbox .ai-buddy-modal-window.post-generate-popup.popup-for-images .post-image-generate {
+  display: block;
+  overflow: hidden;
+}
+.postbox .ai-buddy-modal-window.post-generate-popup.popup-for-images .preloader {
+  min-height: 450px;
+  margin: 0 auto;
+}
+.postbox .ai-buddy-modal-window.post-generate-popup.no-content-for-request .ai-buddy-container .section .response-message-icon {
+  background-color: rgba(224, 49, 49, 0.2);
+  color: #E03131;
+}
+.postbox .ai-buddy-modal-window.post-generate-popup.no-content-for-request .generate-new-post,
+.postbox .ai-buddy-modal-window.post-generate-popup.no-content-for-request .empty-content {
+  display: block;
+}
+.postbox .ai-buddy-modal-window.post-generate-popup.no-content-for-request .post-titles-generate,
+.postbox .ai-buddy-modal-window.post-generate-popup.no-content-for-request .post-excerpts-generate,
+.postbox .ai-buddy-modal-window.post-generate-popup.no-content-for-request .post-image-generate,
+.postbox .ai-buddy-modal-window.post-generate-popup.no-content-for-request .error-content {
+  display: none;
+}
+.postbox .ai-buddy-modal-window .product-error {
+  display: none;
+}
+.postbox .ai-buddy-modal-window.server-error .section,
+.postbox .ai-buddy-modal-window.server-error .product-image,
+.postbox .ai-buddy-modal-window.server-error .product-fields,
+.postbox .ai-buddy-modal-window.server-error .preloader {
+  display: none;
+}
+.postbox .ai-buddy-modal-window.server-error .product-error,
+.postbox .ai-buddy-modal-window.server-error .error-content {
+  display: block;
+}
+.postbox .ai-buddy-modal-window.server-error .error-content .section-button-box {
+  display: none;
+}
+.postbox .ai-buddy-modal-window .section-button-box {
+  margin-bottom: -20px;
+}
+
+.post-type-page .ai-buddy-modal-window.post-generate-popup.no-content-for-request .section-button-box {
+  display: none;
+}
+
+.popup-for-images .generated-post-headers img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup .post-image-generate {
+  position: relative;
+  overflow: hidden;
+}
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup .product-title-fields,
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup .product-title-image,
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup .button-product-popup,
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup .product-content,
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup .empty-content {
+  display: none;
+}
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.no-content-for-request .ai-buddy-container .section .response-message-icon {
+  background-color: rgba(224, 49, 49, 0.2);
+  color: #E03131;
+}
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.no-content-for-request .product-content,
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.no-content-for-request .product-content .section-content,
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.no-content-for-request .empty-content,
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.no-content-for-request .button-product-popup {
+  display: block;
+}
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.no-content-for-request .post-titles-generate,
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.no-content-for-request .post-excerpts-generate,
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.no-content-for-request .post-image-generate,
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.no-content-for-request .post-image-generate-done,
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.no-content-for-request .error-content {
+  display: none;
+}
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.server-error .ai-buddy-container .section.product-fields {
+  display: none !important;
+}
+.woocommerce-page .ai-buddy-modal-window.product-generate-popup.server-error .ai-buddy-container .section.product-error {
+  display: block !important;
+}
+.woocommerce-page .ai-buddy-modal-window.popup-for-images .product-content {
+  display: block;
+}
+.woocommerce-page .ai-buddy-modal-window.popup-for-images .product-content .section-content {
+  display: block;
+}
+.woocommerce-page .ai-buddy-modal-window.popup-for-images .preloader {
+  margin: auto;
+}
+.woocommerce-page .ai-buddy-modal-window.popup-for-images.server-error .ai-buddy-container .section.product-image, .woocommerce-page .ai-buddy-modal-window.popup-for-images.server-error .ai-buddy-container .section.product-content {
+  display: none !important;
+}
+.woocommerce-page .ai-buddy-modal-window.popup-for-images.server-error .ai-buddy-container .section.product-error {
+  display: block !important;
+}
+
+.interface-interface-skeleton__sidebar .components-panel {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  z-index: 10;
+}
+.interface-interface-skeleton__sidebar .components-panel .components-panel__body {
+  order: 2;
+}
+.interface-interface-skeleton__sidebar .components-panel .components-panel__body:first-child {
+  order: 0;
+}
+.interface-interface-skeleton__sidebar .components-panel .edit-post-meta-boxes-area {
+  order: 1;
+}
+.interface-interface-skeleton__sidebar .components-panel .edit-post-meta-boxes-area .postbox-header .handle-actions .handlediv {
+  width: 56px;
+}
+.interface-interface-skeleton__sidebar .components-panel .edit-post-meta-boxes-area .postbox-header .handle-actions .handlediv .toggle-indicator:before {
+  content: "\f347";
+  font-size: 16px;
+  color: #1e1e1e;
+}
+.interface-interface-skeleton__sidebar .components-panel .edit-post-meta-boxes-area .postbox-header .handle-actions .handle-order-higher,
+.interface-interface-skeleton__sidebar .components-panel .edit-post-meta-boxes-area .postbox-header .handle-actions .handle-order-lower {
+  display: none;
+}
+
+.generated-post-headers ul {
+  padding: 0;
+  margin: 0;
+}
+.generated-post-headers ul li {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  list-style: none;
+  font-size: 16px;
+  line-height: 19px;
+  border: 1px solid #D6DADE;
+  border-radius: 4px;
+  background-color: #F6F9FC;
+  cursor: pointer;
+}
+.generated-post-headers ul li.active {
+  background-color: rgba(41, 133, 247, 0.2);
+  border-color: #2985F7;
+}
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+}
+.preloader .circle {
+  width: 14px;
+  height: 14px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background-color: #2985F7;
+  -webkit-animation: circle 1s ease-in-out infinite;
+          animation: circle 1s ease-in-out infinite;
+}
+.preloader .circle:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.preloader .circle:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes circle {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+body.ai-buddy-api-screen #wpbody-content #topic-form {
+  display: none;
+}
+body .ai-buddy-first-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: calc(100vh - 36px);
+  overflow: hidden;
+  background-color: #F0F3F5;
+  z-index: 100;
+}
+body .ai-buddy-first-screen-content {
+  max-width: 500px;
+  -webkit-filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.1));
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+body .ai-buddy-first-screen-content-image {
+  margin-bottom: 20px;
+}
+body .ai-buddy-first-screen-content-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+body .ai-buddy-first-screen-content-title {
+  padding: 0 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+body .ai-buddy-first-screen-content-description {
+  padding: 0 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+body .ai-buddy-first-screen-content-form {
+  padding: 20px;
+  border-top: 1px solid #D6DADE;
+}
+body .ai-buddy-first-screen-content-form-title {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #27374E;
+}
+body .ai-buddy-first-screen-content-form-information {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #8C99A5;
+}
+body .ai-buddy-first-screen-content-form-information span {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  font-size: 13px;
+}
+body .ai-buddy-first-screen-content-form-information a {
+  color: #8C99A5;
+}
+body .ai-buddy-first-screen-content-form-information a:hover, body .ai-buddy-first-screen-content-form-information a:active, body .ai-buddy-first-screen-content-form-information a:focus {
+  text-decoration: underline;
+  transition: all 0.3s;
+  box-shadow: none;
+  outline: none;
+}
+body .ai-buddy-first-screen-content-form-information:last-child {
+  margin-bottom: 0;
+}
+body .ai-buddy-first-screen-content-form input {
+  margin-bottom: 20px;
+}
+body .ai-buddy-first-screen-content-form-buttons {
+  display: flex;
+}
+body .ai-buddy-first-screen-content-form-buttons .button-send-api-key {
+  margin: 0 0 0 auto;
+}
+body .ai-buddy-first-screen-content-form .ai-buddy-api-key-validator {
+  display: none;
+  margin: -10px 0 20px;
+}
+body .ai-buddy-first-screen-content-form .ai-buddy-api-key-validator.invalid {
+  display: block;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 4px;
+  background-color: #F85050;
+  color: #ffffff;
+}
+body .content-params select {
+  margin-bottom: 20px;
+}
+
+body #bulk-content-builder {
+  display: none;
+}
+body .generated-posts .generated-post {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 20px;
+}
+body .generated-posts .generated-post .generated-post-title {
+  flex: 1;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+body .api-key-settings {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(30, 42, 54, 0.1);
+  margin: 20px 20px 0 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+body .api-key-settings-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: rgba(224, 49, 49, 0.15);
+}
+body .api-key-settings-content {
+  flex: 1;
+}
+body .api-key-settings-content span {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #27374E;
+}
+body .api-key-settings-content .api-key-validation {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  transition: color 0.3s;
+  color: #8C99A5;
+}
+body .api-key-settings-content .api-key-validation.valid {
+  color: #88C12C;
+}
+body .api-key-settings-content .api-key-validation.invalid {
+  color: #E03131;
+}
+body .api-key-settings-content .api-key-validation a {
+  text-decoration: underline;
+  color: #8C99A5;
+}
+body .api-key-settings-content .api-key-validation a:hover {
+  text-decoration: none;
+}
+body .api-key-settings.valid {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+body .api-key-settings.invalid {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+body .usage-section {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #F6F9FC;
+  border-radius: 4px;
+}
+body .usage-section-data {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #27374E;
+}
+body .usage-section-content {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(39, 55, 78, 0.7);
+}
+body .usage-section-content .tokens-data {
+  padding-bottom: 5px;
+}
+body .usage-section-content .tokens-data:last-child {
+  padding-bottom: 0;
+}
+body .usage-section-content .tokens-data > div {
+  display: inline-block;
+  text-transform: capitalize;
+}
+body .plugin-settings-request {
+  display: inline-block;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  right: 20px;
+  top: 50px;
+  min-width: 300px;
+  padding: 12px 14px;
+  background-color: #88C12C;
+  transition: all 0.3s;
+  box-shadow: 0 5px 30px rgba(30, 42, 54, 0.1);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+body .plugin-settings-request .settings-request-icon {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2px;
+  font-size: 16px;
+}
+body .plugin-settings-request.active {
+  visibility: visible;
+  opacity: 1;
+}
+body .plugin-settings-request .error-request {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+body .plugin-settings-request.request-error {
+  background-color: #E03131;
+}
+body .plugin-settings-request.request-error .error-request {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+body .plugin-settings-request.request-error .successful-request {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+body.admin_page_ai_buddy_settings .api-key-settings-button {
+  display: none;
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.ai-buddy-image-generator #image-generator-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ai-buddy-image-generator #image-generator-form .image-prompt-wrapper {
+  flex-basis: 100%;
+}
+.ai-buddy-image-generator #image-generator-form .image-prompt-wrapper .image-prompt-subtitle {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.ai-buddy-image-generator #image-generator-form .image-prompt-wrapper #image-prompt {
+  margin-bottom: 20px;
+  color: #27374E;
+}
+.ai-buddy-image-generator #image-generator-form .image-prompt-wrapper #image-prompt::-webkit-input-placeholder {
+  color: #8C99A5;
+}
+.ai-buddy-image-generator #image-generator-form .image-prompt-wrapper #image-prompt::-moz-placeholder {
+  color: #8C99A5;
+}
+.ai-buddy-image-generator #image-generator-form .image-prompt-wrapper #image-prompt::-ms-input-placeholder {
+  color: #8C99A5;
+}
+.ai-buddy-image-generator #image-generator-form .image-prompt-wrapper #image-prompt::placeholder {
+  color: #8C99A5;
+}
+.ai-buddy-image-generator #image-generator-form .image-count-wrapper {
+  flex-basis: 100%;
+}
+.ai-buddy-image-generator #image-generator-form .image-count-wrapper .image-count-subtitle {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.ai-buddy-image-generator #image-generator-form .image-count-wrapper #image-count {
+  margin-bottom: 20px;
+}
+.ai-buddy-image-generator #image-generator-form .generate-row {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+}
+.ai-buddy-image-generator #image-generator-form .image-generate-wrapper {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ai-buddy-image-generator #image-generator-form .image-generate-wrapper .image-generate-button {
+  padding: 12px 20px;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #2985F7;
+  text-transform: uppercase;
+  transition: 0.3s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  border: none;
+  cursor: pointer;
+}
+.ai-buddy-image-generator #image-generator-form .image-generate-wrapper .image-generate-button[disabled] {
+  opacity: 0.5;
+}
+.ai-buddy-image-generator #image-generator-form .image-generate-wrapper .image-generate-button i {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: 0.3s;
+  font-size: 22px;
+}
+.ai-buddy-image-generator #image-generator-form .image-generate-wrapper .image-generate-button.loading {
+  font-size: 0;
+}
+.ai-buddy-image-generator #image-generator-form .image-generate-wrapper .image-generate-button.loading i {
+  opacity: 1;
+  visibility: visible;
+  -webkit-animation: rotate 1.5s infinite linear;
+          animation: rotate 1.5s infinite linear;
+}
+.ai-buddy-image-generator #image-generator-form .image-generate-wrapper .image-generate-button:hover {
+  background-color: #1c56bc;
+}
+.ai-buddy-image-generator #image-generator-form .image-generate-wrapper .button-images-abort {
+  display: none;
+}
+.ai-buddy-image-generator #image-generator-form .estimated-price-wrapper {
+  flex-basis: 50%;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 500;
+  color: #27374E;
+  opacity: 0.5;
+}
+.ai-buddy-image-generator .result-section {
+  display: none;
+}
+.ai-buddy-image-generator .result-section .result-section-wrapper {
+  position: relative;
+}
+.ai-buddy-image-generator .result-section .result-section-wrapper .result-count {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #8C99A5;
+  text-transform: uppercase;
+}
+.ai-buddy-image-generator .result-section .result-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+.ai-buddy-image-generator .result-section .result-wrapper .image-wrapper {
+  width: 33.333333%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+.ai-buddy-image-generator .result-section .result-wrapper .image-wrapper:hover .image-buttons-wrapper {
+  bottom: 20px;
+  opacity: 1;
+}
+.ai-buddy-image-generator .result-section .result-wrapper .image-wrapper .generated-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #D6DADE;
+  background-color: #F6F9FC;
+}
+.ai-buddy-image-generator .result-section .result-wrapper .image-wrapper .image-buttons-wrapper {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  width: calc(100% - 40px);
+  bottom: -50%;
+  padding: 0 10px;
+  transition: 0.3s;
+  opacity: 0;
+}
+.ai-buddy-image-generator .result-section .result-wrapper .image-wrapper .image-buttons-wrapper .generated-button {
+  flex-basis: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 15.6px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 12px 0;
+  transition: 0.3s;
+}
+.ai-buddy-image-generator .result-section .result-wrapper .image-wrapper .image-buttons-wrapper .generated-button.details-button {
+  background-color: #8C99A5;
+}
+.ai-buddy-image-generator .result-section .result-wrapper .image-wrapper .image-buttons-wrapper .generated-button.details-button:hover {
+  background-color: #1E2A36;
+}
+.ai-buddy-image-generator .result-section .result-wrapper .image-wrapper .image-buttons-wrapper .generated-button.download-button {
+  color: #ffffff;
+  background-color: #2985F7;
+}
+.ai-buddy-image-generator .result-section .result-wrapper .image-wrapper .image-buttons-wrapper .generated-button.download-button:hover {
+  background-color: #1c56bc;
+}
+@media (min-width: 1367px) {
+  .ai-buddy-image-generator .result-section .result-wrapper .image-wrapper {
+    width: 25%;
+  }
+  .ai-buddy-image-generator .result-section .result-wrapper .image-wrapper .generated-img {
+    width: 100%;
+  }
+}
+.ai-buddy-image-generator .ai-buddy-container-sidebar .coming-soon-title {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #1E2A36;
+  padding: 10px 0 10px 10px;
+  border-radius: 10px 10px 0 0;
+  text-transform: uppercase;
+}
+
+.ai-buddy-modal-window {
+  font-family: "San Francisco", "Arial", "Times New Roman", "Calibri";
+}
+.ai-buddy-modal-window.active .ai-buddy-modal-wrapper {
+  bottom: 50%;
+}
+.ai-buddy-modal-window.active .ai-buddy-modal-wrapper .modal-header {
+  margin-bottom: 10px;
+  border: none;
+  align-items: flex-start;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper {
+  position: fixed;
+  bottom: -100%;
+  left: 50%;
+  transition: all 0.4s;
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+  z-index: 9999;
+  max-width: 900px;
+  width: 100%;
+  max-height: 800px;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  padding: 24px 20px;
+  border-radius: 10px;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper.active {
+  bottom: 50%;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row {
+  display: flex;
+  gap: 20px;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row > div {
+  flex-basis: 50%;
+  max-width: 50%;
+  width: 100%;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .images-group .popup-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .images-group .edit-media-wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-height: 40px;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #F6F9FC;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  padding: 0 10px;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .images-group .edit-media-wrapper.media-downloaded {
+  opacity: 1;
+  visibility: visible;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .images-group .edit-media-wrapper .edit-media-button {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #2985F7;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .images-group .edit-media-wrapper .edit-media-button:hover {
+  color: #1c56bc;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .images-group .edit-media-wrapper .edit-media {
+  color: #27374E;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .images-group .edit-media-wrapper .edit-media .attachment-id {
+  padding-left: 25px;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .images-group .edit-media-wrapper .edit-media i {
+  font-size: 16px;
+  position: absolute;
+  top: -1px;
+  left: 0px;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form textarea {
+  min-height: unset;
+  height: 60px;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .image-info-subtitle {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #27374E;
+  margin-bottom: 10px;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .image-info-subtitle:not(:first-child) {
+  margin-top: 20px;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .popup-buttons-wrapper {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .popup-buttons-wrapper .popup-button {
+  flex-basis: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 15.6px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 12px 0;
+  transition: 0.3s;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .popup-buttons-wrapper .popup-button.add-to-media {
+  background-color: #8C99A5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .popup-buttons-wrapper .popup-button.add-to-media[disabled] {
+  opacity: 0.5;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .popup-buttons-wrapper .popup-button.add-to-media:hover {
+  background-color: #1E2A36;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .popup-buttons-wrapper .popup-button.add-to-media i {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: 0.3s;
+  font-size: 22px;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .popup-buttons-wrapper .popup-button.add-to-media.loading {
+  font-size: 0;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .popup-buttons-wrapper .popup-button.add-to-media.loading i {
+  opacity: 1;
+  visibility: visible;
+  -webkit-animation: rotate 1.5s infinite linear;
+          animation: rotate 1.5s infinite linear;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .popup-buttons-wrapper .popup-button.download {
+  color: #ffffff;
+  background-color: #2985F7;
+}
+.ai-buddy-modal-window .ai-buddy-modal-wrapper .image-modal-row .image-info #image-download-form .popup-buttons-wrapper .popup-button.download:hover {
+  background-color: #1c56bc;
+}
+
+.playground-section input[type=number].no-arrows {
+  -moz-appearance: textfield;
+}
+.playground-section input[type=number].no-arrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.playground-section input[type=number].no-arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.playground-section .section .playground-notice {
+  display: block;
+  padding-top: 10px;
+  text-transform: none;
+  font-weight: 400;
+  color: #8C99A5;
+}
+.playground-section .section .section-content #playground-query {
+  height: 150px;
+}
+.playground-section .section .section-content #playground-answer {
+  height: 300px;
+}
+.playground-section .section .section-content .submit-section {
+  display: flex;
+  padding-top: 20px;
+  border-top: 1px solid #D6DADE;
+  justify-content: space-between;
+  align-items: center;
+}
+.playground-section .section .section-content .submit-section .submit-button-wrapper .submit-button {
+  width: 90px;
+  background-color: #2985F7;
+  border-radius: 4px;
+  padding: 12px 0;
+  border: none;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: 0.3s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.playground-section .section .section-content .submit-section .submit-button-wrapper .submit-button[disabled] {
+  opacity: 0.5;
+}
+.playground-section .section .section-content .submit-section .submit-button-wrapper .submit-button:hover {
+  background-color: #1c56bc;
+}
+.playground-section .section .section-content .submit-section .submit-button-wrapper .submit-button i {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: 0.3s;
+  font-size: 22px;
+}
+.playground-section .section .section-content .submit-section .submit-button-wrapper .submit-button.loading {
+  font-size: 0;
+}
+.playground-section .section .section-content .submit-section .submit-button-wrapper .submit-button.loading i {
+  opacity: 1;
+  visibility: visible;
+  -webkit-animation: rotate 1.5s infinite linear;
+          animation: rotate 1.5s infinite linear;
+}
+.playground-section .ai-buddy-container-sidebar .section-content .playground-setting-wrapper #playground-model {
+  margin-bottom: 20px;
+}
+.playground-section .ai-buddy-container-sidebar .section-content .playground-setting-wrapper #playground-temperature, .playground-section .ai-buddy-container-sidebar .section-content .playground-setting-wrapper #playground-max-tokens {
+  margin-bottom: 10px;
+}
+
+body .ai-buddy-feedback-modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  padding-top: 150px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+body .ai-buddy-feedback-modal .feedback-modal-content {
+  position: relative;
+  max-width: 400px;
+  padding: 45px;
+  margin: auto;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 10px 50px rgba(30, 42, 54, 0.16);
+  background-color: #ffffff;
+  /** Rating Stars */
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-modal-close {
+  position: absolute;
+  top: 5px;
+  right: -33px;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 24px;
+  cursor: pointer;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-thank-you {
+  display: block;
+  margin-bottom: 25px;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-rating-stars {
+  margin-top: 25px;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-rating-stars ul {
+  padding: 0;
+  margin: 0 0 15px 0;
+  list-style-type: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-rating-stars ul li {
+  margin: 0;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-rating-stars ul li.star {
+  display: inline-block;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-rating-stars ul li.star:not(.disabled):hover {
+  opacity: 0.7;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-rating-stars ul li.star i {
+  display: block;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-rating-stars ul li.star.selected i {
+  color: #d6981b;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-rating-stars .rating-text {
+  color: #1E2A36;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 5px;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-review-text {
+  color: #1E2A36;
+  font-size: 15px;
+  margin-top: 20px;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-extra {
+  display: none;
+  text-align: left;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-extra textarea {
+  width: 100%;
+  resize: none;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  padding: 14px;
+  border-radius: 5px;
+  border: 1px solid #D6DADE;
+  background-color: #F6F9FC;
+  color: #1E2A36;
+  font-size: 16px;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-extra textarea:focus, body .ai-buddy-feedback-modal .feedback-modal-content .feedback-extra textarea:active {
+  outline: 0;
+  box-shadow: none;
+  border: 1px solid #2985F7;
+  background-color: #ffffff;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-extra textarea::-webkit-input-placeholder {
+  opacity: 0.5;
+  color: #1E2A36;
+  font-size: 14px;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-extra textarea::-moz-placeholder {
+  opacity: 0.5;
+  color: #1E2A36;
+  font-size: 14px;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-extra textarea::-ms-input-placeholder {
+  opacity: 0.5;
+  color: #1E2A36;
+  font-size: 14px;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-extra textarea::placeholder {
+  opacity: 0.5;
+  color: #1E2A36;
+  font-size: 14px;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-extra small {
+  opacity: 0.8;
+  font-size: 100%;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-submit {
+  width: 100%;
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 20px;
+  padding: 17px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #2985F7;
+  box-shadow: 0 6px 6px rgba(30, 42, 54, 0.12);
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-submit:focus {
+  outline: 0;
+}
+body .ai-buddy-feedback-modal .feedback-modal-content .feedback-submit img {
+  width: 16px;
+  margin-left: 5px;
+  vertical-align: text-top;
+}
+body .stm-plugin-admin-notice.aibuddy-openai-chatgpt {
+  font-family: "San Francisco", "Arial", "Times New Roman", "Calibri" !important;
+}
+body .stm-plugin-admin-notice.aibuddy-openai-chatgpt h3 {
+  margin: 0 0 10px 0;
+}
+body .stm-plugin-admin-notice.aibuddy-openai-chatgpt p {
+  line-height: 1.4;
+}

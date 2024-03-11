@@ -1,0 +1,320 @@
+@import "../global/variables";
+
+.postbox {
+  &#ai_buddy-metadata {
+    .postbox-header {
+      h2 {
+        padding: 5px 0 5px 50px;
+        background: url("../images/ai-buddy.png") no-repeat 16px 50%;
+        background-size: 26px;
+      }
+    }
+    .inside {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+  .ai-buddy-button {
+    &.button-full {
+      margin-top: 10px;
+    }
+  }
+  .ai-buddy-meta-box-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  .ai-buddy-modal-window {
+    &.post-generate-popup {
+      .empty-content {
+        margin-bottom: 0;
+        .section-button-box {
+          margin-bottom: 0;
+        }
+      }
+      .section-title,
+      .empty-content,
+      .excerpt-empty,
+      .generate-new-post,
+      .error-content {
+        display: none;
+      }
+      .ai-buddy-button {
+        &.right-alignment {
+          display: none;
+        }
+      }
+      &.popup-for-titles {
+        .popup-post-title,
+        .post-titles-generate {
+          display: block;
+        }
+      }
+      &.popup-for-excerpts {
+        .popup-post-excerpt-title,
+        .post-excerpts-generate {
+          display: block;
+        }
+      }
+      &.popup-for-images {
+        .popup-post-image-title,
+        .post-image-generate {
+          display: block;
+          overflow: hidden;
+        }
+        .preloader {
+          min-height: 450px;
+          margin: 0 auto;
+        }
+      }
+      &.no-content-for-request {
+        .ai-buddy-container {
+          .section {
+            .response-message {
+              &-icon {
+                background-color: rgba($red, 0.2);
+                color: $red;
+              }
+            }
+          }
+        }
+        .generate-new-post,
+        .empty-content {
+          display: block;
+        }
+        .post-titles-generate,
+        .post-excerpts-generate,
+        .post-image-generate,
+        .error-content {
+          display: none;
+        }
+      }
+    }
+    .product-error {
+      display: none;
+    }
+    &.server-error {
+      .section,
+      .product-image,
+      .product-fields,
+      .preloader {
+        display: none;
+      }
+      .product-error,
+      .error-content {
+        display: block;
+      }
+      .error-content {
+        .section-button-box {
+          display: none;
+        }
+      }
+    }
+    .section-button-box {
+      margin-bottom: -20px;
+    }
+  }
+}
+
+.post-type-page {
+  .ai-buddy-modal-window {
+    &.post-generate-popup {
+      &.no-content-for-request {
+        .section-button-box {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.popup-for-images {
+  .generated-post-headers {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.woocommerce-page {
+  .ai-buddy-modal-window {
+    &.product-generate-popup {
+      .post-image-generate {
+        position: relative;
+        overflow: hidden;
+      }
+      .product-title-fields,
+      .product-title-image,
+      .button-product-popup,
+      .product-content,
+      .empty-content {
+        display: none;
+      }
+      img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      &.no-content-for-request {
+        .ai-buddy-container {
+          .section {
+            .response-message {
+              &-icon {
+                background-color: rgba($red, 0.2);
+                color: $red;
+              }
+            }
+          }
+        }
+        .product-content,
+        .product-content .section-content,
+        .empty-content,
+        .button-product-popup {
+          display: block;
+        }
+        .post-titles-generate,
+        .post-excerpts-generate,
+        .post-image-generate,
+        .post-image-generate-done,
+        .error-content {
+          display: none;
+        }
+      }
+      &.server-error {
+        .ai-buddy-container {
+          .section {
+            &.product-fields {
+              display: none !important;
+            }
+            &.product-error {
+              display: block !important;
+            }
+          }
+        }
+      }
+    }
+    &.popup-for-images {
+      .product-content {
+        display: block;
+        .section-content {
+          display: block;
+        }
+      }
+      .preloader {
+        margin: auto;
+      }
+      &.server-error {
+        .ai-buddy-container {
+          .section {
+            &.product-image,
+            &.product-content {
+              display: none !important;
+            }
+            &.product-error {
+              display: block !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.interface-interface-skeleton__sidebar {
+  .components-panel {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 10;
+    .components-panel__body {
+      order: 2;
+      &:first-child {
+        order: 0;
+      }
+    }
+    .edit-post-meta-boxes-area {
+      order: 1;
+      .postbox-header {
+        .handle-actions {
+          .handlediv {
+            width: 56px;
+            .toggle-indicator {
+              &:before {
+                content: "\f347";
+                font-size: 16px;
+                color: #1e1e1e;
+              }
+            }
+          }
+          .handle-order-higher,
+          .handle-order-lower {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.generated-post-headers {
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      display: block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      list-style: none;
+      font-size: 16px;
+      line-height: 19px;
+      border: 1px solid $light-gray;
+      border-radius: 4px;
+      background-color: $lighter-gray;
+      cursor: pointer;
+      &.active {
+        background-color: rgba($blue, 0.2);
+        border-color: $blue;
+      }
+    }
+  }
+}
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+
+  .circle {
+    width: 14px;
+    height: 14px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background-color: $blue;
+    animation: circle 1s ease-in-out infinite;
+
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+  }
+
+  @keyframes circle {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}

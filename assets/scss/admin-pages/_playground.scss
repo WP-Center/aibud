@@ -1,0 +1,93 @@
+@import "../global/variables";
+
+.playground-section {
+  input[type="number"].no-arrows {
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  .section {
+    .playground-notice {
+      display: block;
+      padding-top: 10px;
+      text-transform: none;
+      font-weight: 400;
+      color: $gray;
+    }
+    .section-content {
+      #playground-query {
+        height: 150px;
+      }
+      #playground-answer {
+        height: 300px;
+      }
+      .submit-section {
+        display: flex;
+        padding-top: 20px;
+        border-top: 1px solid $light-gray;
+        justify-content: space-between;
+        align-items: center;
+        .submit-button-wrapper {
+          .submit-button {
+            width: 90px;
+            background-color: $blue;
+            border-radius: 4px;
+            padding: 12px 0;
+            border: none;
+            font-size: 13px;
+            line-height: 16px;
+            font-weight: 700;
+            color: $white;
+            text-transform: uppercase;
+            transition: .3s;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            &[disabled] {
+              opacity: 0.5;
+            }
+            &:hover {
+              background-color: $blue-dark;
+            }
+            i {
+              opacity: 0;
+              visibility: hidden;
+              position: absolute;
+              transition: .3s;
+              font-size: 22px;
+            }
+            &.loading {
+              font-size: 0;
+              i {
+                opacity: 1;
+                visibility: visible;
+                animation: rotate 1.5s infinite linear;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ai-buddy-container-sidebar {
+    .section-content {
+      .playground-setting-wrapper {
+        #playground-model {
+          margin-bottom: 20px;
+        }
+        #playground-temperature, #playground-max-tokens {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

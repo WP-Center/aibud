@@ -1,0 +1,284 @@
+@import "../global/variables";
+
+body {
+  .ai-buddy-modal-window {
+    input[type="text"],
+    input[type="email"],
+    input[type="phone"],
+    input[type="password"],
+    input[type="number"],
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 11px 20px;
+      height: 40px;
+      resize: none;
+      outline: none;
+      box-shadow: none;
+      overflow: hidden;
+      overflow-y: auto;
+      background-color: $lighter-gray;
+      border: 1px solid $light-gray;
+      box-sizing: border-box;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      color: $light-dark;
+      &:hover,
+      &:focus,
+      &:active {
+        border: 1px solid $light-gray;
+        box-shadow: none;
+      }
+      &::placeholder {
+        color: $gray;
+      }
+      &:disabled,
+      &[disabled] {
+        opacity: 0.5;
+      }
+    }
+    textarea {
+      min-height: 100px;
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba($gray, 0.4);
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $dark;
+      }
+      &.high-altitude {
+        min-height: 500px;
+      }
+    }
+    .check-box {
+      display: flex;
+      align-items: center;
+      .checkbox {
+        opacity: 0;
+        position: absolute;
+        & + label {
+          position: relative;
+          display: inline-block;
+          user-select: none;
+          transition: .4s ease;
+          height: 24px;
+          width: 49px;
+          border: 1px solid $gray;
+          border-radius: 60px;
+          background-color: $lighter-gray;
+          &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            transition: .2s cubic-bezier(.24, 0, .5, 1);
+            height: 24px;
+            width: 49px;
+            top: 0;
+            left: 0;
+            border-radius: 30px;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            transition: .2s cubic-bezier(.24, 0, .5, 1);
+            background: $gray;
+            height: 18px;
+            width: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 4px;
+            border-radius: 60px;
+          }
+        }
+        &-text {
+          padding-left: 10px;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+          color: $light-dark;
+        }
+        &:checked {
+          & + label {
+            border-color: $blue;
+          }
+          & + label:before {
+            background: $blue;
+            transition: width .2s cubic-bezier(0, 0, 0, .1);
+          }
+          & + label:after {
+            background-color: $white;
+            left: 26px;
+          }
+        }
+      }
+      .section-field-information {
+        margin-left: 30px;
+      }
+    }
+    &.wp-core-ui {
+      #wpwrap {
+        overflow: hidden;
+      }
+      select {
+        &.ai-buddy-select {
+          display: block;
+          width: 100%;
+          max-width: none;
+          background-color: $lighter-gray;
+          border: 1px solid $light-gray;
+          box-sizing: border-box;
+          border-radius: 4px;
+          padding: 10px;
+          font-family: $base-font;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 18px;
+          color: $light-dark;
+          &:hover,
+          &:focus,
+          &:active {
+            border: 1px solid $light-gray;
+            box-shadow: none;
+            color: $light-dark;
+          }
+          &:disabled,
+          &[disabled] {
+            color: $gray;
+          }
+        }
+      }
+    }
+    &-wrapper {
+      position: fixed;
+      bottom: -100%;
+      transform: translateY(100%);
+      transition: all 0.4s;
+      z-index: 9999;
+      width: 460px;
+      max-height: 800px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: $white;
+      padding: 24px 20px;
+      border-radius: 10px;
+      visibility: hidden;
+      opacity: 0;
+      resize: none;
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba($gray, 0.4);
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $dark;
+      }
+      @media (max-height: 780px) {
+        max-height: 600px;
+      }
+    }
+    &-overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: all 0.6s;
+      background-color: rgba($dark, 0.7);
+      visibility: hidden;
+      opacity: 0;
+    }
+    .modal-header {
+      display: flex;
+      align-items: center;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $light-gray;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: $gray;
+      .section-title {
+        flex: 1;
+      }
+      .modal-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 10px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: $lighter-gray;
+        color: $gray;
+      }
+    }
+    .ai-buddy-container {
+      padding: 0;
+      .section {
+        padding: 0;
+        .response-message {
+          padding: 30px 0;
+          &.align-center {
+            text-align: center;
+          }
+          &-icon {
+            display: inline-block;
+            vertical-align: top;
+            background-color: $light-green;
+            margin-bottom: 20px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            font-size: 30px;
+            color: $green;
+          }
+        }
+      }
+    }
+    &.server-error {
+      .ai-buddy-container {
+        .section {
+          .response-message {
+            &-icon {
+              background-color: rgba($red, 0.2);
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+    &.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 9999;
+      .ai-buddy-modal-window-wrapper {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+      }
+      .ai-buddy-modal-window-overlay {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
