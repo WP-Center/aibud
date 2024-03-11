@@ -17,16 +17,6 @@ jobs:
               id: get_version
               run: echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
 
-            - name: Build project
-              run: |
-                  npm install
-                  gulp build
-
-            - name: Install dependencies
-              uses: php-actions/composer@v6
-              with:
-                  dev: no
-
             - name: Zip Folder
               run: |
                   zip -r aibuddy-openai-chatgpt.zip . -x ".git/*" ".github/*" "node_modules/*" ".editorconfig" ".gitignore" "DOCKER_ENV" "docker_tag" "Dockerfile-php-build" "gulpfile.js" "openapi.json" "output.log" "package-lock.json" "package.json" "README.md" "composer.json" "composer.lock"
